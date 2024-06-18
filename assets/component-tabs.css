@@ -1,0 +1,17 @@
+/* Tabs */
+
+.tabs {
+
+}
+
+.tabs .tabs__button {
+  cursor: pointer;
+}
+
+.tabs .tabs__body {
+  display: none;
+}
+
+.tabs .tabs__body.active {
+  display: block;
+}
