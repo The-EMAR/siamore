@@ -1,0 +1,157 @@
+{{- 'section-testimonials.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% assign _blocks = section.blocks %}
+
+{% if _blocks.size > 0 %}
+  <section class="section-testimonials color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+    <div class="page-width">
+      <testimonials-slider class="js-slider">
+        <div class="splide js-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for block in _blocks %}
+                {% assign _block = block.settings %}
+                
+                {% if _block.note != blank %}
+                  <li class="splide__slide">
+                    <blockquote>
+                      {{ _block.note }}
+                    </blockquote>
+  
+                    {% if _block.author != blank %}
+                      <div class="section__author">
+                        {{ _block.author }}
+                      </div><!-- /.section__author -->
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+  
+          <div class="splide__arrows"></div>
+        </div>
+      </testimonials-slider>
+    </div><!-- /.page-width -->
+  </section><!-- /.section-testimonials -->
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Testimonials",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Testimonial",
+      "type": "testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "note",
+          "label": "Note",
+          "default": "Text"
+        },
+        {
+          "type": "richtext",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}  
+{% endschema %}
+
+{% javascript %}
+  (() => {
+    if (customElements.get('testimonials-slider')) {
+      return;
+    }
+
+    class TestimonialsSlider extends HTMLElement {
+      constructor() {
+        super();
+        this.slider = null;
+        this.arrows = this.dataset.arrows;
+        this.options = {
+          waitForTransition: false,
+          perPage: 1,
+          gap: 20,
+          pagination: false,
+          arrows: false
+        };
+
+        if (this.arrows == 'true') {
+          this.options.arrows = true;
+          // this.options.pagination = true;
+        }
+      }
+
+      connectedCallback() {
+        this.initSlider();
+      }
+
+      initSlider() {
+        if (!this.querySelector('.js-slider')) return;
+
+        this.slider = new Splide(
+          this.querySelector('.js-slider'),
+          this.options
+        ).mount();
+      }
+    }
+
+    customElements.define('testimonials-slider', TestimonialsSlider);
+  })();
+{% endjavascript %}
