@@ -2,6 +2,15 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "settings": {
+        "title": "Subscribe to newsletter",
+        "entry": "Subscribe to our newsleeter so you don't miss anything good.",
+        "image": "shopify:\/\/shop_images\/AtKp23kwTjSkSLcf3DAhcA.webp",
+        "color_scheme": ""
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -21,6 +30,7 @@
     }
   },
   "order": [
+    "newsletter-popup",
     "footer"
   ]
 }

@@ -91,6 +91,8 @@
                 >
                   {{- block.settings.text -}}
                 </p>
+              {%- when 'newsletter_popup_trigger' -%}
+                <a href="#" style="color: #daa520;" class="link link--no-margin newsletter-popup-trigger">{{ block.settings.newsletter_popup_trigger_text }}</a>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -783,6 +785,18 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "newsletter_popup_trigger",
+      "name": "Newsletter popup - link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "newsletter_popup_trigger_text",
+          "default": "Get 20% discount for first purchase",
+          "label": "t:sections.main-product.blocks.text.settings.text.label"
         }
       ]
     },
