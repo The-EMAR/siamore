@@ -23,9 +23,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle",
-            "variant_text": "Таблица с размери",
-            "variant_page": "{{ product.metafields.custom.product_sizes.value }}"
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -40,9 +38,39 @@
             "show_gift_card_recipient": true
           }
         },
+        "icon_with_text_MQLHRy": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "star",
+            "heading_1": "European quality standards",
+            "icon_2": "return",
+            "heading_2": "30 days right of return",
+            "icon_3": "truck",
+            "heading_3": "Free delivery over BGN 70"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
+          }
+        },
+        "collapsible_tab_PgHHqL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Доставка и преглед",
+            "icon": "none",
+            "content": "<ol><li><strong>Обработка на поръчката:<\/strong> Вашата поръчка ще бъде обработена в рамките на 1-2 работни дни.<\/li><li><strong>Доставка:<\/strong> Ще получите известие, когато вашата поръчка е изпратена. Доставката обикновено отнема 1-3 работни дни.<\/li><li><strong>Преглед и тест:<\/strong> При получаване на поръчката, проверете за повреди или несъответствия. В случай на проблем, можете да се свържете с нас за връщане или замяна.<\/li><\/ol>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_DNbk9m": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Право на връщане",
+            "icon": "none",
+            "content": "<ul><li><strong>Срок за връщане:<\/strong> Можете да върнете продукт в рамките на 30 дни от датата на получаване.<\/li><li><strong>Условия за връщане:<\/strong> Продуктът трябва да е в оригиналната си опаковка, без следи от употреба.<\/li><li><strong>Замяна на продукт:<\/strong> Можете да замените продукт за друг размер, цвят или модел.<\/li><li><strong>Връщане на сума:<\/strong> Връщането на сумата се извършва в рамките на 30 дни от датата на получаване на върнатия продукт.<\/li><\/ul>",
+            "page": ""
           }
         },
         "share": {
@@ -59,7 +87,10 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "icon_with_text_MQLHRy",
         "description",
+        "collapsible_tab_PgHHqL",
+        "collapsible_tab_DNbk9m",
         "share"
       ],
       "settings": {
