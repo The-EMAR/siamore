@@ -8,10 +8,10 @@
           "settings": {
           }
         },
-        "newsletter_popup_trigger_UTYAh6": {
+        "newsletter_popup_trigger_ngeX7P": {
           "type": "newsletter_popup_trigger",
           "settings": {
-            "newsletter_popup_trigger_text": "Text block"
+            "newsletter_popup_trigger_text": "Get 20% discount for first purchase"
           }
         },
         "price": {
@@ -23,7 +23,9 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "circle",
+            "variant_text": "Таблица с размери",
+            "variant_page": "{{ product.metafields.custom.product_sizes.value }}"
           }
         },
         "quantity_selector": {
@@ -52,7 +54,7 @@
       },
       "block_order": [
         "title",
-        "newsletter_popup_trigger_UTYAh6",
+        "newsletter_popup_trigger_ngeX7P",
         "price",
         "variant_picker",
         "quantity_selector",

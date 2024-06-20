@@ -96,7 +96,13 @@
         <div class="grid__item">
           {% if section.settings.image != blank %}
             <div class="newsletter-popup__image">
-              <img src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" alt="">
+              {%- assign image = section.settings.image -%}
+
+              {{ image | image_url: width: image.width | image_tag: loading: "lazy" }}
+            </div><!-- /.newsletter-popup__image -->
+          {% else %}
+            <div class="newsletter-popup__image">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             </div><!-- /.newsletter-popup__image -->
           {% endif %}
         </div><!-- /.grid__item -->

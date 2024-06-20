@@ -453,7 +453,7 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, class: 'variant-sizes' %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -679,6 +679,37 @@
         </div>
       </modal-dialog>
     {%- endfor -%}
+
+    {% if product.metafields.custom.product_sizes.value != blank %}
+      {% assign variant_picker = section.blocks | where: 'type', 'variant_picker' %}
+      {%- for block in variant_picker -%}
+        <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal color-{{ section.settings.color_scheme }}" {{ block.shopify_attributes }}>
+          <div
+            role="dialog"
+            aria-label="{{ block.settings.variant_text }}"
+            aria-modal="true"
+            class="product-popup-modal__content"
+            tabindex="-1"
+          >
+            <button
+              id="ModalClose-{{ block.id }}"
+              type="button"
+              class="product-popup-modal__toggle"
+              aria-label="{{ 'accessibility.close' | t }}"
+            >
+              {% render 'icon-close' %}
+            </button>
+  
+  
+            <div class="product-popup-modal__content-info">
+              <h1 class="h2">{{ product.metafields.custom.product_sizes.value.title }}</h1>
+              
+              {{ product.metafields.custom.product_sizes.value.content }}
+            </div>
+          </div>
+        </modal-dialog>
+      {%- endfor -%}
+    {% endif %}
 
     {%- if product.media.size > 0 -%}
       <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>

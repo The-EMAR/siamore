@@ -35,6 +35,17 @@
   margin-bottom: 2rem;
 }
 
+.newsletter-popup .newsletter-popup__image svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  vertical-align: top;
+}
+
 .newsletter-popup svg {
   width: 2rem;
 }
