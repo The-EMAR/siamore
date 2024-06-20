@@ -1,182 +1,75 @@
 {
   "sections": {
-    "hero_9CYkDz": {
-      "type": "hero",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "slide_3qmYLw": {
-          "type": "slide",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/AtKp23kwTjSkSLcf3DAhcA.webp",
-            "sub_heading": "Test",
-            "heading": "Test",
-            "text": "Text",
-            "button_text": "",
-            "button_link": ""
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
           }
         },
-        "slide_98TPKf": {
-          "type": "slide",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "image": "shopify:\/\/shop_images\/5K18MweRTmO5HNn8OK8vYQ.webp",
-            "sub_heading": "Sub Heading",
-            "heading": "Heading",
-            "text": "Text",
-            "button_text": "Button Text",
-            "button_link": ""
-          }
-        },
-        "slide_zVAhgk": {
-          "type": "slide",
-          "settings": {
-            "sub_heading": "Sub Heading",
-            "heading": "Heading",
-            "text": "Text",
-            "button_text": "Button Text",
-            "button_link": ""
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "slide_3qmYLw",
-        "slide_98TPKf",
-        "slide_zVAhgk"
+        "heading",
+        "button"
       ],
       "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
-    "products_release_tabs_xKVwzQ": {
-      "type": "products-release-tabs",
-      "blocks": {
-        "tab_xFmcCb": {
-          "type": "tab",
-          "settings": {
-            "title": "Най-нови",
-            "products": [
-              "party-2",
-              "party-3",
-              "party-w-1",
-              "party-w-2"
-            ]
-          }
-        },
-        "tab_gC69Gc": {
-          "type": "tab",
-          "settings": {
-            "title": "Подбрани",
-            "products": [
-              "bear-1",
-              "bear-2",
-              "bear-3",
-              "butterfly-1"
-            ]
-          }
-        },
-        "tab_63nXeE": {
-          "type": "tab",
-          "settings": {
-            "title": "Title",
-            "products": [
-
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "tab_xFmcCb",
-        "tab_gC69Gc",
-        "tab_63nXeE"
-      ],
-      "settings": {
-        "heading": "Heading"
-      }
-    },
-    "featured_collection_XEUQmy": {
+    "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
+        "title": "Featured products",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
+        "collection": "all",
+        "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_blog_tAw9qj": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "blog": "",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "testimonials_FRBBDz": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_tn9fBz": {
-          "type": "testimonial",
-          "settings": {
-            "note": "“Много приятно бях изненадана като получих своят сет, благодаря за бързината и коректността“",
-            "author": "<p><strong>Илияна Бъчварова <br\/><\/strong>Доволен Клиент<\/p>"
-          }
-        },
-        "testimonial_aEGgeD": {
-          "type": "testimonial",
-          "settings": {
-            "note": "“Много приятно бях изненадана като получих своят сет, благодаря за бързината и коректността“",
-            "author": "<p><strong>Илияна Бъчварова <br\/><\/strong>Доволен Клиент<\/p>"
-          }
-        },
-        "testimonial_7jxWXe": {
-          "type": "testimonial",
-          "settings": {
-            "note": "“Много приятно бях изненадана като получих своят сет, благодаря за бързината и коректността“",
-            "author": "<p><strong>Илияна Бъчварова <br\/><\/strong>Доволен Клиент<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_tn9fBz",
-        "testimonial_aEGgeD",
-        "testimonial_7jxWXe"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "hero_9CYkDz",
-    "products_release_tabs_xKVwzQ",
-    "featured_collection_XEUQmy",
-    "featured_blog_tAw9qj",
-    "testimonials_FRBBDz"
+    "image_banner",
+    "featured_collection"
   ]
 }
