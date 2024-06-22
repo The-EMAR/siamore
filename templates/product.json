@@ -31,6 +31,14 @@
           "settings": {
           }
         },
+        "inventory_CQFFiB": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 5,
+            "show_inventory_quantity": true
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -86,6 +94,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "inventory_CQFFiB",
         "buy_buttons",
         "icon_with_text_MQLHRy",
         "description",
@@ -96,9 +105,9 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
