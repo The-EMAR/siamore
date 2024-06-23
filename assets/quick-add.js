@@ -102,6 +102,7 @@ if (!customElements.get('quick-add-modal')) {
 
       updateImageSizes() {
         const product = this.modalContent.querySelector('.product');
+        console.log(product);
         const desktopColumns = product.classList.contains('product--columns');
         if (!desktopColumns) return;
 
