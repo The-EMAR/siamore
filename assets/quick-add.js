@@ -30,6 +30,10 @@ if (!customElements.get('quick-add-modal')) {
               if (classApplied.startsWith('color-') || classApplied === 'gradient')
                 this.modalContent.classList.add(classApplied);
             });
+          
+            // Hide custom created newsletter popup trigger button
+            this.productElement.querySelector('.newsletter-popup-trigger').classList.add('hidden');
+
             this.preventDuplicatedIDs();
             this.removeDOMElements();
             this.setInnerHTML(this.modalContent, this.productElement.innerHTML);
@@ -43,6 +47,7 @@ if (!customElements.get('quick-add-modal')) {
             this.removeGalleryListSemantic();
             this.updateImageSizes();
             this.preventVariantURLSwitching();
+
             super.show(opener);
           })
           .finally(() => {

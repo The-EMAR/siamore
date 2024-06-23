@@ -1110,7 +1110,7 @@ class VariantSelects extends HTMLElement {
     if (mediaGalleryDestination == null || mediaGalleryDestination == undefined ) {
       mediaGalleryDestination = html.querySelector('media-gallery ul');
     } 
-    
+
     const refreshSourceData = () => {
       const mediaGallerySourceItems = Array.from(mediaGallerySource.querySelectorAll('li[data-media-id]'));
       const sourceSet = new Set(mediaGallerySourceItems.map((item) => item.dataset.mediaId));
@@ -1174,7 +1174,6 @@ class VariantSelects extends HTMLElement {
   renderProductInfo() {
     const requestedVariantId = this.currentVariant.id;
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
-    console.log('here');
 
     fetch(
       `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
@@ -1185,8 +1184,6 @@ class VariantSelects extends HTMLElement {
       .then((responseText) => {
         // prevent unnecessary ui changes from abandoned selections
         if (this.currentVariant.id !== requestedVariantId) return;
-
-        console.log(this.dataset.section);
 
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const destination = document.getElementById(`price-${this.dataset.section}`);
