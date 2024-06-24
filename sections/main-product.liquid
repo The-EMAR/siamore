@@ -13,6 +13,7 @@
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
     {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
     {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+    {{ 'component-product-swatch.css' | asset_url | stylesheet_tag }}
   {% endunless %}
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
@@ -116,7 +117,7 @@
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                   </div>
                 {%- endif -%}
-                <div class="product__tax caption rte">
+                <div class="product__tax caption rte hidden">
                   {%- if cart.taxes_included -%}
                     {{ 'products.product.include_taxes' | t }}
                   {%- endif -%}
@@ -202,6 +203,29 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+              {% when 'color' %}
+                {% assign current_swatch_color = product.metafields.custom.color_swatch.value.color %}
+                {% assign current_swatch_color_name = product.metafields.custom.color_swatch.value.name %}
+                {% assign current_group_name = product.metafields.custom.group_name.value | handleize %}
+
+                <div class="product-swatch">
+                  <span class="form__label">Color</span>
+
+                  <ul>
+                    {% for _product in collections.all.products %}
+                      {% assign other_product_swatch_color = _product.metafields.custom.color_swatch.value.color %}
+                      {% assign other_product_group_name = _product.metafields.custom.group_name.value | handleize %}
+
+                      {% if current_group_name == other_product_group_name and other_product_swatch_color != blank %}
+                        <li class="">
+                          <a href="{{ _product.url }}" class="{% if product == _product %}active{% endif %}">
+                            <span class="product-swatch__swatch" style="background-color: {{ other_product_swatch_color }};"></span>
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </div><!-- /.product-swatches -->
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -839,6 +863,11 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
+      "limit": 1
+    },
+    {
+      "type": "color",
+      "name": "Color",
       "limit": 1
     },
     {

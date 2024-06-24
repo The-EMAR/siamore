@@ -19,6 +19,11 @@
           "settings": {
           }
         },
+        "color_BkEeb7": {
+          "type": "color",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -92,6 +97,7 @@
         "title",
         "newsletter_popup_trigger_ngeX7P",
         "price",
+        "color_BkEeb7",
         "variant_picker",
         "quantity_selector",
         "inventory_CQFFiB",
@@ -128,7 +134,7 @@
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",

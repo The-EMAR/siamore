@@ -1,0 +1,43 @@
+/* Product Swatch */
+
+.product-swatch {}
+
+.product-swatch ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 -1rem;
+}
+
+.product-swatch li {
+  padding: 1rem;
+}
+
+.product-swatch a {
+    display: inline-block;
+    max-width: 100%;
+    cursor: pointer;
+    outline-offset: 0.2rem;
+    outline-color: transparent;
+    outline-style: solid;
+    transition-property: outline-color, outline-width, box-shadow;
+    transition-duration: var(--duration-short);
+    transition-timing-function: ease;
+}
+
+.product-swatch a.active {
+  outline: 0.1rem solid rgb(var(--color-foreground));
+  border-radius: 50%;
+}
+
+.product-swatch .product-swatch__swatch{
+  display: block;
+  width: 3rem;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-origin: border-box;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 50%;
+}
