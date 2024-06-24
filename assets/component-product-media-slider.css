@@ -1,0 +1,25 @@
+product-media-slider {
+  display: block;
+}
+
+product-media-slider .splide {
+  padding-bottom: 3rem;
+}
+
+product-media-slider .splide__pagination__page {
+  border-radius: 0;
+  width: 2rem;
+  height: .3rem;
+}
+
+product-media-slider .splide__pagination__page.is-active {
+  transform: none;
+  background-color: #545454;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  product-media-slider {
+    margin: 0 -1.7rem;
+  } 
+}

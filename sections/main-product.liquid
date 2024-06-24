@@ -9,6 +9,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'component-product-media-slider.css' | asset_url | stylesheet_tag }}
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
     {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
@@ -21,7 +22,7 @@
 
   {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-top: 0px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
@@ -68,33 +69,35 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
+  <div class="page-width product-container">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% comment %} {% render 'product-media-gallery', variant_images: variant_images %} {% endcomment %}
 
-        <product-media-slider>
+        <product-media-slider
+          {% if section.settings.enable_sticky_info %}
+            class="product__column-sticky"
+          {% endif %}
+        >
           <div class="splide js-slider">
             <div class="splide__track">
               <ul class="splide__list">
                 {%- for media in product.media -%}
-                  {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-                    <li
-                      id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
-                      class="splide__slide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-                      data-media-id="{{ section.id }}-{{ media.id }}"
-                    >
-                      {% render 'product-thumbnail',
-                        media: media,
-                        modal_id: section.id,
-                        xr_button: true,
-                        media_width: media_width,
-                        media_fit: section.settings.media_fit,
-                        constrain_to_viewport: section.settings.constrain_to_viewport,
-                        lazy_load: lazy_load
-                      %}
-                    </li>
-                  {%- endunless -%}
+                  <li
+                    id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
+                    class="splide__slide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+                    data-media-id="{{ section.id }}-{{ media.id }}"
+                  >
+                    {% render 'product-thumbnail',
+                      media: media,
+                      modal_id: section.id,
+                      xr_button: true,
+                      media_width: media_width,
+                      media_fit: section.settings.media_fit,
+                      constrain_to_viewport: section.settings.constrain_to_viewport,
+                      lazy_load: lazy_load
+                    %}
+                  </li>
                 {%- endfor -%}
 
               </ul>
@@ -139,8 +142,8 @@
                   {%- render 'price',
                     product: product,
                     use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
+                    show_badges: false,
+                    price_class: 'price--medium'
                   -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
@@ -248,7 +251,7 @@
                       {% assign other_product_group_name = _product.metafields.custom.group_name.value | handleize %}
 
                       {% if current_group_name == other_product_group_name and other_product_swatch_color != blank %}
-                        <li class="">
+                        <li>
                           <a href="{{ _product.url }}" class="{% if product == _product %}active{% endif %}">
                             <span class="product-swatch__swatch" style="background-color: {{ other_product_swatch_color }};"></span>
                           </a>

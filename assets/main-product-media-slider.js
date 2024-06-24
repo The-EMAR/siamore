@@ -8,7 +8,7 @@
       super();
       this.slider = null;
       this.options = {
-        waitForTransition: true,
+        waitForTransition: false,
         perPage: 1,
         pagination: true,
         gap: '2rem',

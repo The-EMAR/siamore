@@ -10,6 +10,7 @@
         },
         "newsletter_popup_trigger_ngeX7P": {
           "type": "newsletter_popup_trigger",
+          "disabled": true,
           "settings": {
             "newsletter_popup_trigger_text": "Get 20% discount for first purchase"
           }
@@ -34,14 +35,6 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
-          }
-        },
-        "inventory_CQFFiB": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 5,
-            "show_inventory_quantity": true
           }
         },
         "buy_buttons": {
@@ -100,7 +93,6 @@
         "color_BkEeb7",
         "variant_picker",
         "quantity_selector",
-        "inventory_CQFFiB",
         "buy_buttons",
         "icon_with_text_MQLHRy",
         "description",
@@ -120,7 +112,7 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 32,
         "padding_bottom": 12
       }
     },
