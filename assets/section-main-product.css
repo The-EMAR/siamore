@@ -531,7 +531,7 @@ a.product__text {
   }
 
   .product__modal-opener .product__media-icon {
-    opacity: 0;
+    /* opacity: 0; */
   }
 
   .product__modal-opener:hover .product__media-icon,
