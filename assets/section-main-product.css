@@ -5,8 +5,8 @@
 /* Mobile */
 @media (max-width: 767px) {
   .product-container {
-    overflow: hidden;
- 
+    /* overflow: hidden; */
+    /* padding: 0; */
   }
 }
 
@@ -30,7 +30,7 @@
 /* Mobile */
 @media (max-width: 767px) {
   .product__media-wrapper {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
 }
 
