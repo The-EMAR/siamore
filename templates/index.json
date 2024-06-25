@@ -49,6 +49,7 @@
     "section_collection_release_bgwtFL": {
       "type": "section-collection-release",
       "settings": {
+        "enable_slider_on_desktop": false,
         "heading": "Галерия \/ Collection 1",
         "collection": "all-products",
         "image_ratio": "portrait",
@@ -67,6 +68,7 @@
     "section_collection_release_kXrKtk": {
       "type": "section-collection-release",
       "settings": {
+        "enable_slider_on_desktop": false,
         "heading": "Collection 2",
         "collection": "all-products",
         "image_ratio": "portrait",
@@ -87,16 +89,39 @@
         "padding_bottom": 36
       }
     },
-    "section_products_release_rMCMyh": {
-      "type": "section-products-release",
+    "section_collection_release_eth8Bn": {
+      "type": "section-collection-release",
       "settings": {
-        "heading": "",
-        "products": [
-
-        ],
+        "enable_slider_on_desktop": true,
+        "heading": "Аксесоари",
+        "collection": "летни-рокли",
         "image_ratio": "adapt",
         "image_shape": "default",
         "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "section_collection_release_PNPJcR": {
+      "type": "section-collection-release",
+      "settings": {
+        "enable_slider_on_desktop": true,
+        "heading": "Чанти",
+        "collection": "летни-рокли",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_collection_release_t8MUYg": {
+      "type": "section-collection-release",
+      "settings": {
+        "enable_slider_on_desktop": true,
+        "heading": "Обеци",
+        "collection": "летни-рокли",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
@@ -108,6 +133,8 @@
     "section_image_slider_teD4AM",
     "section_collection_release_kXrKtk",
     "section_collections_release_3Gcj8x",
-    "section_products_release_rMCMyh"
+    "section_collection_release_eth8Bn",
+    "section_collection_release_PNPJcR",
+    "section_collection_release_t8MUYg"
   ]
 }
