@@ -155,6 +155,7 @@
 .facets {
   display: block;
   grid-column-start: span 2;
+  margin-bottom: 2rem;
 }
 
 .facets__form {

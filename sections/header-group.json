@@ -11,18 +11,10 @@
             "text": "Вземи твията рокля с отстъпка с код: DRESS10",
             "link": ""
           }
-        },
-        "announcement_K7EJhm": {
-          "type": "announcement",
-          "settings": {
-            "text": "Безплатна доставка над 100лв",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_K7EJhm"
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "scheme-3",

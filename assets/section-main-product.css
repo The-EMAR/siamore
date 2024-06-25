@@ -859,7 +859,7 @@ a.product__text {
 
 .product-popup-modal__button {
   font-size: 1.6rem;
-  padding-right: 1.3rem;
+  padding-right: 0;
   padding-left: 0;
   min-height: 4.4rem;
   text-underline-offset: 0.3rem;
@@ -1489,5 +1489,33 @@ a.product__text {
 
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
+  }
+}
+
+/* Mobile */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .product__title,
+  .product__price,
+  .product-form__input {
+    text-align: center;
+  }
+
+  .product__swatch {
+    text-align: center;
+  }
+
+  .product__swatch ul {
+    justify-content: center;
+  }
+
+  .product-popup-modal__opener {
+    display: block;
+    text-align: center;
+  }
+
+  .product .quantity {
+    margin: 0 auto;
   }
 }

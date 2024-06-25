@@ -1,75 +1,113 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "section_image_slider_mWkXJH": {
+      "type": "section-image-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_iayDqF": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "desktop_image": "shopify:\/\/shop_images\/White_e433301a-5494-45ea-9236-d293e872702c.png",
+            "mobile_image": "shopify:\/\/shop_images\/Soft_Blue.png",
+            "link": "shopify:\/\/collections\/сватбени-рокли"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide_xGF3nG": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "desktop_image": "shopify:\/\/shop_images\/Soft_Purple.png",
+            "mobile_image": "shopify:\/\/shop_images\/Pink_e685a450-d4c3-428b-b29b-5fdd16473121.png",
+            "link": "shopify:\/\/collections\/сватбени-рокли"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_iayDqF",
+        "slide_xGF3nG"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "padding_top": 36,
+        "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "section_products_release_BWwRmf": {
+      "type": "section-products-release",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
+        "heading": "Най-продавани",
+        "products": [
+          "дамска-рокля-summer-allure-3-в-цвят-бяло",
+          "дамска-рокля-summer-allure-3",
+          "дамска-рокля-night-allure-в-черен-цвят",
+          "дамска-рокля-night-allure-в-цвят-тъмно-зелено",
+          "дамска-рокля-midnight-elegance"
+        ],
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_collection_release_bgwtFL": {
+      "type": "section-collection-release",
+      "settings": {
+        "heading": "Галерия \/ Collection 1",
+        "collection": "all-products",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_image_slider_teD4AM": {
+      "type": "section-image-slider",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_collection_release_kXrKtk": {
+      "type": "section-collection-release",
+      "settings": {
+        "heading": "Collection 2",
+        "collection": "all-products",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "section_collections_release_3Gcj8x": {
+      "type": "section-collections-release",
+      "settings": {
+        "collections": [
+          "сватбени-рокли",
+          "летни-рокли",
+          "официални-рокли"
+        ],
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_products_release_rMCMyh": {
+      "type": "section-products-release",
+      "settings": {
+        "heading": "",
+        "products": [
+
+        ],
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "section_image_slider_mWkXJH",
+    "section_products_release_BWwRmf",
+    "section_collection_release_bgwtFL",
+    "section_image_slider_teD4AM",
+    "section_collection_release_kXrKtk",
+    "section_collections_release_3Gcj8x",
+    "section_products_release_rMCMyh"
   ]
 }

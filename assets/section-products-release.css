@@ -1,0 +1,33 @@
+/* section-products-release */
+
+.section-products-release .splide__list {
+  row-gap: var(--grid-desktop-horizontal-spacing);
+  column-gap: var(--grid-desktop-vertical-spacing);
+}
+
+.section-products-release .splide {
+  padding-bottom: 3rem;
+}
+
+.section-products-release .splide__pagination {
+  bottom: 1.5rem;
+}
+
+.section-products-release .splide__pagination__page {
+  border-radius: 0;
+  width: 2rem;
+  height: .3rem;
+}
+
+.section-products-release .splide__pagination__page.is-active {
+  transform: none;
+  background-color: #545454;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .section-products-release .splide__list {
+    row-gap: var(--grid-mobile-horizontal-spacing);
+    column-gap: var(--grid-mobile-vertical-spacing);
+  }
+}

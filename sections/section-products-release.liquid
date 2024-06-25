@@ -1,0 +1,211 @@
+{{ 'section-products-release.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% assign _section = section.settings %}
+
+<section class="section-products-release section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if _section.heading != blank %}
+      <header class="section__head">
+       <h2>{{ _section.heading }}</h2>
+      </header><!-- /.section__head -->
+    {% endif %}
+
+    {% if _section.products != blank %}
+      <div class="section__body">
+        <products-release>
+          <div class="splide js-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for product in _section.products limit: 8 %}
+                  <li class="splide__slide">
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      section_id: section.id,
+                    %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </products-release>
+      </div><!-- /.section__body -->
+    {% endif %}
+  </div><!-- /.page-width -->
+</section><!-- /.section-products-release -->
+
+{% schema %}
+  {
+  "name": "Products Release",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Products",
+      "limit": 8
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-collection.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.featured-collection.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.image_shape.options__1.label"
+        },
+        {
+          "value": "arch",
+          "label": "t:sections.all.image_shape.options__2.label"
+        },
+        {
+          "value": "blob",
+          "label": "t:sections.all.image_shape.options__3.label"
+        },
+        {
+          "value": "chevronleft",
+          "label": "t:sections.all.image_shape.options__4.label"
+        },
+        {
+          "value": "chevronright",
+          "label": "t:sections.all.image_shape.options__5.label"
+        },
+        {
+          "value": "diamond",
+          "label": "t:sections.all.image_shape.options__6.label"
+        },
+        {
+          "value": "parallelogram",
+          "label": "t:sections.all.image_shape.options__7.label"
+        },
+        {
+          "value": "round",
+          "label": "t:sections.all.image_shape.options__8.label"
+        }
+      ],
+      "default": "default",
+      "label": "t:sections.all.image_shape.label",
+      "info": "t:sections.all.image_shape.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Release"
+    }
+  ]
+}  
+{% endschema %}
+
+{% javascript %}
+  (() => {
+    if (customElements.get('products-release')) {
+      return;
+    }
+
+    class ProductsRelease extends HTMLElement {
+      constructor() {
+        super();
+        this.slider = null;
+        this.options = {
+          waitForTransition: false,
+          autoplay: false,
+          perPage: 4,
+          pagination: true,
+          gap: '0rem',
+          arrows: false,
+          perPage: 4,
+          breakpoints: {
+            767: {
+              destroy: false,
+              perPage: 2,
+            },
+          }
+        };
+      }
+
+      connectedCallback() {
+        this.initSlider();
+      }
+
+      initSlider() {
+        if (!this.querySelector('.js-slider')) return;
+
+        this.slider = new Splide(
+          this.querySelector('.js-slider'),
+          this.options
+        ).mount();
+      }
+    }
+
+    customElements.define('products-release', ProductsRelease);
+  })();
+{% endjavascript %}

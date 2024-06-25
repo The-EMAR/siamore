@@ -20,16 +20,16 @@
           "settings": {
           }
         },
-        "color_BkEeb7": {
-          "type": "color",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
+          }
+        },
+        "color_BkEeb7": {
+          "type": "color",
+          "settings": {
           }
         },
         "quantity_selector": {
@@ -90,8 +90,8 @@
         "title",
         "newsletter_popup_trigger_ngeX7P",
         "price",
-        "color_BkEeb7",
         "variant_picker",
+        "color_BkEeb7",
         "quantity_selector",
         "buy_buttons",
         "icon_with_text_MQLHRy",
