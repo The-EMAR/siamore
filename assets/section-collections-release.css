@@ -3,7 +3,7 @@
 .section-collections-release ul {
   display: flex;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: scroll;
   margin: 0;
   padding: 0 0 2rem;
   gap: 4rem;
