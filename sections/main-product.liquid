@@ -79,7 +79,13 @@
             class="product__column-sticky"
           {% endif %}
         >
-          <div class="splide js-slider">
+          <div class="splide js-slider" 
+            {% if product.media.size > 1 %} 
+              style="padding-bottom: 4rem;"
+            {% else %}
+              style="padding-bottom: 2rem;"
+            {% endif %}
+          >
             <div class="splide__track">
               <ul class="splide__list">
                 {%- for media in product.media -%}

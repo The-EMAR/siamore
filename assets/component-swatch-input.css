@@ -12,6 +12,8 @@
   transition-duration: var(--duration-short);
   transition-timing-function: ease;
   forced-color-adjust: none;
+  border: .1rem solid transparent;
+  touch-action: auto;
 }
 
 .swatch-input__input + .swatch-input__label.swatch-input__label--square {
@@ -21,13 +23,14 @@
 /* Active state */
 .swatch-input__input:active + .swatch-input__label,
 .swatch-input__input:checked + .swatch-input__label {
-  outline: 0.1rem solid rgb(var(--color-foreground));
+  /* outline: 0.1rem solid rgb(var(--color-foreground)); */
+  border: 0.1rem solid rgb(var(--color-foreground));
 }
 
 /* Hover state */
 .swatch-input__input + .swatch-input__label:hover,
 .swatch-input__input:hover + .swatch-input__label {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.4);
+  /* outline: 0.2rem solid rgba(var(--color-foreground), 0.4); */
 }
 
 /* Focus visible */
