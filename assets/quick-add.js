@@ -32,7 +32,9 @@ if (!customElements.get('quick-add-modal')) {
             });
           
             // Hide custom created newsletter popup trigger button
-            this.productElement.querySelector('.newsletter-popup-trigger').classList.add('hidden');
+            if (this.productElement.querySelector('.newsletter-popup-trigger')) {
+              this.productElement.querySelector('.newsletter-popup-trigger').classList.add('hidden');
+            }
 
             this.preventDuplicatedIDs();
             this.removeDOMElements();
