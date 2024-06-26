@@ -6,16 +6,16 @@
         "slide_iayDqF": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/White_e433301a-5494-45ea-9236-d293e872702c.png",
-            "mobile_image": "shopify:\/\/shop_images\/Soft_Blue.png",
+            "desktop_image": "shopify:\/\/shop_images\/jlGEQ45QSOeYRk5l8Qvgbg.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/2LeFAMouScK_0Zqta_wFwA.jpg",
             "link": "shopify:\/\/collections\/сватбени-рокли"
           }
         },
         "slide_xGF3nG": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Soft_Purple.png",
-            "mobile_image": "shopify:\/\/shop_images\/Pink_e685a450-d4c3-428b-b29b-5fdd16473121.png",
+            "desktop_image": "shopify:\/\/shop_images\/3lPOpfwXRr6WkVk6fQS4Aw.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/ToF_SOAMSLKYixELGAa6Cw.jpg",
             "link": "shopify:\/\/collections\/сватбени-рокли"
           }
         }
@@ -25,7 +25,7 @@
         "slide_xGF3nG"
       ],
       "settings": {
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -43,23 +43,45 @@
         "image_ratio": "portrait",
         "image_shape": "default",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "section_collection_release_bgwtFL": {
       "type": "section-collection-release",
       "settings": {
         "enable_slider_on_desktop": false,
-        "heading": "Галерия \/ Collection 1",
-        "collection": "all-products",
+        "heading": "Най-нови",
+        "collection": "сватбени-рокли",
         "image_ratio": "portrait",
         "image_shape": "default",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "section_image_slider_teD4AM": {
       "type": "section-image-slider",
+      "blocks": {
+        "slide_3Rn8gB": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/QXo0vGvMRpOHtmy5IyacLw.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/QXo0vGvMRpOHtmy5IyacLw.jpg",
+            "link": ""
+          }
+        },
+        "slide_YPeXY7": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/kESByWn6QLy4gzv3IHEoQA.webp",
+            "mobile_image": "shopify:\/\/shop_images\/kESByWn6QLy4gzv3IHEoQA.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_3Rn8gB",
+        "slide_YPeXY7"
+      ],
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
@@ -69,11 +91,11 @@
       "type": "section-collection-release",
       "settings": {
         "enable_slider_on_desktop": false,
-        "heading": "Collection 2",
+        "heading": "",
         "collection": "all-products",
         "image_ratio": "portrait",
         "image_shape": "default",
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     },
@@ -86,7 +108,7 @@
           "официални-рокли"
         ],
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "section_collection_release_eth8Bn": {
