@@ -4,8 +4,8 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "show_collection_image": true,
+        "color_scheme": "scheme-3"
       }
     },
     "product-grid": {
@@ -19,9 +19,9 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard",
+        "quick_add": "none",
         "enable_filtering": true,
-        "filter_type": "vertical",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "columns_mobile": "1",
         "padding_top": 36,
