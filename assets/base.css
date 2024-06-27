@@ -3526,6 +3526,16 @@ details-disclosure>details {
   grid-row: span 1;
 }
 
+.mine-grid .grid__item.item11 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.mine-grid .grid__item.item14 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
 /* Add media queries for responsive design if needed */
 @media (max-width: 768px) {
   .mine-grid {
