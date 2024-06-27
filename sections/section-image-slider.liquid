@@ -38,11 +38,11 @@
                     {% endif %}
 
                       <div class="section__image section__image--desktop">
-                        {{ desktop_image | image_url: width: desktop_image.width | image_tag: loading: 'lazy' }}
+                        {{ desktop_image | image_url: width: desktop_image.width | image_tag: loading: 'lazy', desktop_image.presentation.focal_point }}
                       </div><!-- /.section__image -->
       
                       <div class="section__image section__image--mobile">
-                        {{ mobile_image | image_url: width: mobile_image.width | image_tag: loading: 'lazy' }}
+                        {{ mobile_image | image_url: width: mobile_image.width | image_tag: loading: 'lazy', mobile_image.presentation.focal_point }}
                       </div><!-- /.section__image -->
                       
                     {% if _block.link != blank %}

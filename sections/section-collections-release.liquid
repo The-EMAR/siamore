@@ -27,7 +27,7 @@
             <div class="section__content__wrapper">
               <a href="{{ collection.url }}">
                 <div class="section__image">
-                  {{ collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy' }}
+                  {{ collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy', collection.featured_image.presentation.focal_point }}
                 </div><!-- /.section__image -->
               </a>
             </div><!-- /.section__content__wrapper -->
