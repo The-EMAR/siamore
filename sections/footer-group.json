@@ -4,6 +4,7 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
         "title": "Subscribe to newsletter",
         "entry": "Subscribe to our newsleeter so you don't miss anything good.",
