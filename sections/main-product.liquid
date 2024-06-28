@@ -250,24 +250,26 @@
                 {% assign current_swatch_color_name = product.metafields.custom.color_swatch.value.name %}
                 {% assign current_group_name = product.metafields.custom.group_name.value | handleize %}
 
-                <div class="product-swatch product__swatch">
-                  <span class="form__label">Color</span>
-
-                  <ul>
-                    {% for _product in collections.all.products %}
-                      {% assign other_product_swatch_color = _product.metafields.custom.color_swatch.value.color %}
-                      {% assign other_product_group_name = _product.metafields.custom.group_name.value | handleize %}
-
-                      {% if current_group_name == other_product_group_name and other_product_swatch_color != blank %}
-                        <li>
-                          <a href="{{ _product.url }}" class="{% if product == _product %}active{% endif %}">
-                            <span class="product-swatch__swatch" style="background-color: {{ other_product_swatch_color }};"></span>
-                          </a>
-                        </li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-                </div><!-- /.product-swatches -->
+                {% if current_swatch_color != blank %}
+                  <div class="product-swatch product__swatch">
+                    <span class="form__label">Color</span>
+  
+                    <ul>
+                      {% for _product in collections.all.products %}
+                        {% assign other_product_swatch_color = _product.metafields.custom.color_swatch.value.color %}
+                        {% assign other_product_group_name = _product.metafields.custom.group_name.value | handleize %}
+  
+                        {% if current_group_name == other_product_group_name and other_product_swatch_color != blank %}
+                          <li>
+                            <a href="{{ _product.url }}" class="{% if product == _product %}active{% endif %}">
+                              <span class="product-swatch__swatch" style="background-color: {{ other_product_swatch_color }};"></span>
+                            </a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div><!-- /.product-swatches -->
+                {% endif %}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
