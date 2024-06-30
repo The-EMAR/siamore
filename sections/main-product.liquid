@@ -150,7 +150,8 @@
                       product: product,
                       use_variant: true,
                       show_badges: false,
-                      price_class: 'price--medium'
+                      use_separator: false,
+                      price_class: 'price--large'
                     -%}
                   </div>
                   {%- if product.quantity_price_breaks_configured? -%}
@@ -769,7 +770,7 @@
             </button>
   
             <div class="product-popup-modal__content-info">
-              <h1 class="h2">{{ product.metafields.custom.product_sizes.value.title }}</h1>
+              {% comment %} <h1 class="h2">{{ product.metafields.custom.product_sizes.value.title }}</h1> {% endcomment %}
               
               {{ product.metafields.custom.product_sizes.value.content }}
             </div>

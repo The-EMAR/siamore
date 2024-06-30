@@ -16,7 +16,8 @@
         "slide_axPYxx"
       ],
       "settings": {
-        "padding_top": 24,
+        "container_full_width": true,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -77,6 +78,7 @@
         "slide_4PnjNJ"
       ],
       "settings": {
+        "container_full_width": false,
         "padding_top": 0,
         "padding_bottom": 16
       }
@@ -97,8 +99,11 @@
       "type": "section-collections-release",
       "settings": {
         "collections": [
-          "летни-рокли"
+          "летни-рокли",
+          "дамски-сет",
+          "къси-рокли"
         ],
+        "color_scheme": "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c",
         "padding_top": 36,
         "padding_bottom": 0
       }

@@ -113,10 +113,10 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "cart_drawer_collection": "летни-рокли",
     "cart_color_scheme": "scheme-1",
     "sections": {
       "main-password-header": {
@@ -136,12 +136,6 @@
 
     ],
     "blocks": {
-      "12893132836628567133": {
-        "type": "shopify:\/\/apps\/qikify-checkout-plus\/blocks\/app-embed\/6fd40802-0d8b-41fa-a1e3-0676a18f92a5",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "6603664506335945664": {
         "type": "shopify:\/\/apps\/transtore-language-translate\/blocks\/switcher_embed_block\/afeffe82-e563-4f78-90f4-f1e3d96286c3",
         "disabled": false,
@@ -210,6 +204,17 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#fec53e",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#ffffff",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",

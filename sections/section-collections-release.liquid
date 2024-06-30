@@ -18,23 +18,28 @@
 
 {% assign _section = section.settings %}
 
-<section class="section-collections-release section-{{ section.id }}-padding">
+<section class="section-collections-release section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
   <div class="page-width">
     <ul>
       {% if _section.collections != blank %}
-        {% for collection in collections limit: 3 %}
+        {% for collection in _section.collections limit: 3 %}
           <li>
             <div class="section__content__wrapper">
               <a href="{{ collection.url }}">
                 <div class="section__image">
                   {{ collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: 'lazy' }}
+
+                  <div class="section__content">
+                    <h3>{{ collection.title | upcase }}</h3>
+
+                    <span class="section__btn">Разгледай тук</span>
+                  </div><!-- /.section__content -->
                 </div><!-- /.section__image -->
               </a>
             </div><!-- /.section__content__wrapper -->
           </li>
         {% endfor %}        
       {% endif %}
-    
     </ul>
   </div><!-- /.page-width -->
 </section><!-- /.section-collections-release -->
@@ -49,6 +54,12 @@
       "id": "collections",
       "label": "Collections",
       "limit": 3
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "header",

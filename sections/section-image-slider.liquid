@@ -17,7 +17,7 @@
 {% assign _section = section.settings %}
 {% assign _blocks = section.blocks %}
 
-<section class="section-image-slider section-{{ section.id }}-padding">
+<section class="section-image-slider section-{{ section.id }}-padding {% if _section.container_full_width %} section-image-slider--full-width {% endif %}">
   <div class="page-width">
     <image-slider>
       <div class="splide js-slider">
@@ -32,19 +32,30 @@
                   {%- assign mobile_image = _block.mobile_image -%}
   
                   {% if desktop_image != blank or mobile_image != blank %}
-
                     {% if _block.link != blank %}
                       <a href="{{ _block.link }}">
                     {% endif %}
 
-                      <div class="section__image section__image--desktop">
-                        {{ desktop_image | image_url: width: desktop_image.width | image_tag: loading: 'lazy' }}
-                      </div><!-- /.section__image -->
-      
-                      <div class="section__image section__image--mobile">
-                        {{ mobile_image | image_url: width: mobile_image.width | image_tag: loading: 'lazy' }}
-                      </div><!-- /.section__image -->
-                      
+                      {% if desktop_image != blank %}
+                        <div class="section__image section__image--desktop">
+                          {{ desktop_image | image_url: width: desktop_image.width | image_tag: loading: 'lazy' }}
+                        </div><!-- /.section__image -->
+                      {% else %}
+                        <div class="section__image section__image--empty">
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        </div><!-- /.section__image -->
+                      {% endif %}
+
+                      {% if mobile_image != blank %}
+                        <div class="section__image section__image--mobile">
+                          {{ mobile_image | image_url: width: mobile_image.width | image_tag: loading: 'lazy' }}
+                        </div><!-- /.section__image -->                   
+                      {% else %}
+                        <div class="section__image section__image--empty section__image--mobile">
+                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        </div><!-- /.section__image -->
+                      {% endif %}
+          
                     {% if _block.link != blank %}
                       </a>
                     {% endif %}               
@@ -70,6 +81,12 @@
   "name": "Image Slider",
   "max_blocks": 5,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "container_full_width",
+      "label": "Container - full width",
+      "default": true
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

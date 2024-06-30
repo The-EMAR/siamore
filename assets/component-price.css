@@ -111,3 +111,23 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+/* price__store */ 
+.price__store {
+  border-top: .1rem solid rgb(var(--color-foreground));
+}
+
+.price__store > span {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.price__store > span:last-child {
+  margin-right: 0;
+}
+
+/* price separator */
+
+.price .price__separator {
+  margin: 0;
+}

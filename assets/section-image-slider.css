@@ -49,3 +49,24 @@
     padding-bottom: 100%;
   }
 }
+
+
+/* Modificators */
+
+.section-image-slider--full-width .page-width {
+  max-width: 100%;
+  padding: 0;
+}
+
+.section-image-slider--full-width .section__image {
+  /* padding-bottom: 30%; */
+  padding-bottom: 0;
+  height: calc(100vh - 40vh);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .section-image-slider--full-width .section__image {
+    /* padding-bottom: 70%; */
+  }
+}
