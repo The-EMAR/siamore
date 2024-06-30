@@ -28,7 +28,7 @@
 
     {% if _section.products != blank %}
       <div class="section__body">
-        <products-release>
+        <products-release data-desktopgap="{{ settings.spacing_grid_vertical }}px" data-mobilegap="{{ settings.spacing_grid_vertical | divided_by: 2 }}px">
           <div class="splide js-slider">
             <div class="splide__track">
               <ul class="splide__list">
@@ -175,18 +175,20 @@
       constructor() {
         super();
         this.slider = null;
+        this.desktopGap = this.dataset.desktopgap;
+        this.mobileGap = this.dataset.mobilegap;
         this.options = {
           waitForTransition: false,
           autoplay: false,
           perPage: 4,
           pagination: true,
-          gap: '0rem',
+          gap: `${this.desktopGap}`,
           arrows: false,
           perPage: 4,
           breakpoints: {
             767: {
-              destroy: false,
               perPage: 2,
+              gap: `${this.mobileGap}`,
             },
           }
         };

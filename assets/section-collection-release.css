@@ -7,10 +7,6 @@
   grid-column-gap: var(--grid-desktop-vertical-spacing);
 }
 
-.section-collection-release .splide__list {
-  grid-row-gap: var(--grid-desktop-horizontal-spacing);
-  grid-column-gap: var(--grid-desktop-vertical-spacing);
-}
 
 .section-collection-release .splide {
   padding-bottom: 3rem;
@@ -29,12 +25,4 @@
 .section-collection-release .splide__pagination__page.is-active {
   transform: none;
   background-color: #545454;
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .section-collection-release .splide__list {
-    row-gap: var(--grid-mobile-horizontal-spacing);
-    column-gap: var(--grid-mobile-vertical-spacing);
-  }
 }

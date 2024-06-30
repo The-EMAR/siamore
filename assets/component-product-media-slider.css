@@ -24,6 +24,6 @@ product-media-slider .splide__pagination__page.is-active {
 /* Mobile */
 @media (max-width: 767px) {
   product-media-slider {
-    margin: 0 -1.5rem;
+    margin: -.2rem -1.7rem 0;
   } 
 }

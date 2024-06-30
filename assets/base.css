@@ -3562,3 +3562,12 @@ details-disclosure>details {
     grid-row: span 2 / 6;
   }
 }
+
+/* mobile-overflow-hidden */
+
+/* Mobile */
+@media (max-width: 767px) {
+ .mobile-overflow-hidden {
+  overflow: hidden;
+ } 
+}

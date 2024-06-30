@@ -28,7 +28,7 @@
 
     {% if _section.collection != blank %}
       <div class="section__body">
-        <collection-release data-slider={{ _section.enable_slider_on_desktop }}>
+        <collection-release data-slider={{ _section.enable_slider_on_desktop }} data-desktopgap="{{ settings.spacing_grid_vertical }}px" data-mobilegap="{{ settings.spacing_grid_vertical | divided_by: 2 }}px">
           <div class="splide js-slider">
             <div class="splide__track">
               <ul class="splide__list">
@@ -181,21 +181,24 @@
         super();
         this.slider = null;
         this.enableSlider = this.dataset.slider;
+        this.desktopGap = this.dataset.desktopgap;
+        this.mobileGap = this.dataset.mobilegap;
 
         this.options = {
           waitForTransition: false,
           autoplay: false,
           perPage: 4,
           pagination: false,
-          gap: '0rem',
+          gap: `${this.desktopGap}`,
           arrows: false,
           perPage: 4,
           destroy: true,
           breakpoints: {
             767: {
               destroy: false,
-              pagination: true,
               perPage: 2,
+              gap: `${this.mobileGap}`,
+              pagination: true,
             },
           }
         };

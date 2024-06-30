@@ -2,14 +2,6 @@
 
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-  .product-container {
-    /* overflow: hidden; */
-    /* padding: 0; */
-  }
-}
-
 .product {
   margin: 0;
 }
