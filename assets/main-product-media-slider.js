@@ -12,7 +12,8 @@
         perPage: 1,
         pagination: true,
         gap: '2rem',
-        arrows: false
+        arrows: false,
+        autoHeight: true
       };
     }
 

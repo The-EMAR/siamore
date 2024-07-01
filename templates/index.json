@@ -21,6 +21,19 @@
         "padding_bottom": 0
       }
     },
+    "section_collections_release_3Gcj8x": {
+      "type": "section-collections-release",
+      "settings": {
+        "collections": [
+          "летни-рокли",
+          "дамски-сет",
+          "къси-рокли"
+        ],
+        "color_scheme": "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "section_products_release_BWwRmf": {
       "type": "section-products-release",
       "settings": {
@@ -95,19 +108,6 @@
         "padding_bottom": 0
       }
     },
-    "section_collections_release_3Gcj8x": {
-      "type": "section-collections-release",
-      "settings": {
-        "collections": [
-          "летни-рокли",
-          "дамски-сет",
-          "къси-рокли"
-        ],
-        "color_scheme": "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "section_collection_release_eth8Bn": {
       "type": "section-collection-release",
       "settings": {
@@ -147,11 +147,11 @@
   },
   "order": [
     "section_image_slider_mWkXJH",
+    "section_collections_release_3Gcj8x",
     "section_products_release_BWwRmf",
     "section_collection_release_bgwtFL",
     "section_image_slider_teD4AM",
     "section_collection_release_kXrKtk",
-    "section_collections_release_3Gcj8x",
     "section_collection_release_eth8Bn",
     "section_collection_release_PNPJcR",
     "section_collection_release_t8MUYg"

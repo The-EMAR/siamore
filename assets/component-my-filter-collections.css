@@ -1,0 +1,47 @@
+/* component-my-filter-collections.css */
+
+.my-filter-collections {}
+
+.my-filter-collections ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  row-gap: 1rem;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.my-filter-collections ul a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 1.6rem;
+  color: rgba(var(--color-foreground));
+  border: .1rem solid rgba(var(--color-foreground));
+  text-wrap: nowrap;
+  color: rgba(var(--color-foreground));
+  padding: .3rem 1rem;
+}
+
+.my-filter-collections ul li.active a {
+  background-color: rgba(var(--color-foreground));
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .my-filter-collections .page-width {
+    padding-right: 0;
+  }
+
+  .my-filter-collections ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+    padding-right: 1.5rem;
+  }
+}
