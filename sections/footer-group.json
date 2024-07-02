@@ -23,25 +23,25 @@
             "alignment": ""
           }
         },
-        "link_list_aewegR": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "main-menu"
-          }
-        },
         "link_list_nFDzNX": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Категории",
             "menu": "main-menu"
+          }
+        },
+        "link_list_TkYgqR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Политики",
+            "menu": "footer"
           }
         }
       },
       "block_order": [
         "image_adj39D",
-        "link_list_aewegR",
-        "link_list_nFDzNX"
+        "link_list_nFDzNX",
+        "link_list_TkYgqR"
       ],
       "settings": {
         "color_scheme": "scheme-2",
