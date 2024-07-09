@@ -21,6 +21,55 @@
   {%- endif -%}
 
   {%- style -%}
+    /* Overide variant selects - size, color ... */
+
+    .product-form__input--pill input[type='radio']:checked + label {
+      background-color: var(--my-color);
+    }
+
+    .product-form__input--pill input[type='radio'] + label {
+      border: var(--variant-pills-border-width) solid var(--my-color);
+      color: var(--my-color);
+    }
+
+    .product-form__submit {
+      text-shadow: var(--my-text-shadow);
+    }
+
+    .product-form__submit:after {
+      box-shadow: none;
+      border: .1rem solid var(--my-color);
+    }
+
+    .product-form__submit span {
+      color: var(--my-color);
+    }
+
+    .quantity:after {
+      box-shadow: none;
+      border: .1rem solid var(--my-color);
+    }
+
+    .quantity .quantity__input {
+      color: var(--my-color);
+    }
+
+    .quantity-cart {
+      /* color: var(--my-color); */
+    }
+
+    .splide__track {
+      box-shadow: var(--my-box-shadow);
+    }
+
+    .shopify-payment-button__button {
+      background-color: var(--my-color);
+    }
+
+    .shopify-payment-button__button:after {
+      box-shadow: none;
+    }
+
     .section-{{ section.id }}-padding {
       padding-top: 0px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -33,6 +82,7 @@
       }
     }
   {%- endstyle -%}
+
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
