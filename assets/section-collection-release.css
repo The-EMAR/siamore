@@ -24,5 +24,5 @@
 
 .section-collection-release .splide__pagination__page.is-active {
   transform: none;
-  background-color: #545454;
+  background-color: var(--my-color);
 }

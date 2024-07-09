@@ -63,6 +63,7 @@
         },
         "collapsible_tab_PgHHqL": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Доставка и преглед",
             "icon": "none",
@@ -102,7 +103,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4fc88280-4e18-4acc-9de5-a8cf88fe90e6",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
