@@ -6,6 +6,7 @@
 }
 
 .component-offer > p {
+  color: #000000d4;
   margin: 0;
 }
 
@@ -13,5 +14,5 @@
   text-decoration: unset;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #eea81f;
+  color: red;
 }

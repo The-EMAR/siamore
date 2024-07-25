@@ -14,12 +14,30 @@ window.addEventListener('DOMContentLoaded', () => {
     return formattedDays + ":" + formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
   }
 
+  function getRandomNumber(min) {
+    let max = min + 4200;
+    // Ensure the inputs are numbers and handle edge cases
+    if (typeof min !== 'number' || typeof max !== 'number') {
+        throw new Error('Both inputs must be numbers.');
+    }
+    if (min > max) {
+        throw new Error('The first number must be less than or equal to the second number.');
+    }
+
+    // Generate a random number between min and max (inclusive)
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   function startCountdown(totalSeconds) {
     let parentElement = document.querySelector('.js-countdown-timer');
     let timerElement = document.querySelector('.js-countdown-timer span');
     let countdownData = parentElement.getAttribute('data-countdown');
 
     totalSeconds = parseInt(countdownData);
+
+    totalSeconds = getRandomNumber(totalSeconds);
+
+    console.log(totalSeconds);
 
     function updateTimer() {
       if (totalSeconds <= 0) {

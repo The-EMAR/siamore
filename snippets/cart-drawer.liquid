@@ -481,14 +481,16 @@
 
                   <ul>
                     {% for product in found_collection.products %}
-                      <li>
-                        {% render 'card-product',
-                            class: 'drawer'
-                            mobile_truncate: 15, 
-                            card_product: product,
-                            section_id: section.id
-                          %}
-                      </li>
+                      {% if product.available %}
+                        <li>
+                          {% render 'card-product',
+                              class: 'drawer'
+                              mobile_truncate: 15, 
+                              card_product: product,
+                              section_id: section.id
+                            %}
+                        </li>
+                      {% endif %}
                     {% endfor %}
                   </ul>
                 {% endif %}

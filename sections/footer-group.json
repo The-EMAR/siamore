@@ -4,8 +4,21 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_ka9kVm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-transparent-white.png",
+            "image_width": 190,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_ka9kVm"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-e71b8dd5-68ec-451a-b59f-2a7679fe7463",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,

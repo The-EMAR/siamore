@@ -25,6 +25,8 @@
         "offer_xfY3H3": {
           "type": "offer",
           "settings": {
+            "countdown_timer": 29880,
+            "discount_color": "scheme-d6b755d6-9d90-443f-a70d-63868e5c2eb3"
           }
         },
         "price": {
@@ -63,7 +65,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-b9ec894b-e010-4fc2-8960-188b917c1900",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -85,7 +87,7 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,

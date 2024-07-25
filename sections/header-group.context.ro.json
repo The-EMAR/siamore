@@ -4,5 +4,20 @@
     "market": "ro"
   },
   "sections": {
+    "announcement-bar": {
+      "settings": {
+        "show_line_separator": true
+      },
+      "blocks": {
+      }
+    },
+    "header": {
+      "settings": {
+        "color_scheme": "scheme-2fea4244-ed20-4342-983c-395d30cc311f",
+        "menu_color_scheme": "scheme-2fea4244-ed20-4342-983c-395d30cc311f"
+      },
+      "blocks": {
+      }
+    }
   }
 }

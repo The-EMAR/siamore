@@ -463,8 +463,9 @@
                   render 'share-button', block: block, share_link: share_url
                 %}
               {%- when 'offer' -%}
-                {% render 'component-product-offer' countdown: 57990, product: product %}
-                
+
+                {% render 'component-product-offer' countdown: block.settings.countdown_timer, discount_color: block.settings.discount_color, product: product %}
+            
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
@@ -977,6 +978,18 @@
       "type": "offer",
       "name": "Offer",
       "settings": [
+        {
+          "type": "number",
+          "id": "countdown_timer",
+          "label": "Countdown ",
+          "default": 29880
+        },
+        {
+          "type": "color_scheme",
+          "id": "discount_color",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        }
       ]
     },
     {

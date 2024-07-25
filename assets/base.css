@@ -3570,7 +3570,7 @@ details-disclosure > details {
   }
 }
 
-/* My Modify */
+/* My Modify Global Updates over Dawn theme */
 
 /* Cart Drawer */
 
@@ -3590,6 +3590,12 @@ details-disclosure > details {
 
 .drawer__middle ul li {
   flex: 0 0 58%;
+}
+
+/* .price .price-item */
+
+.price .price-item {
+  margin: 0 !important;
 }
 
 /* Price Sale On */
@@ -3628,4 +3634,67 @@ details-disclosure > details {
   margin-top: -1.2rem;
   padding: 0.4rem;
   border-radius: .3rem;
+}
+
+/* Product Size */
+
+.product-form__input--pill input[type='radio']:checked + label {
+  background-color: #FF6F91 !important;
+  color: white !important;
+}
+
+.product-form__input--pill input[type='radio'] + label {
+  border: .1rem solid rgba(255, 111, 145, 0.5) !important;
+}
+
+.product-form__input--pill input[type='radio']:disabled + label, 
+.product-form__input--pill input[type='radio'].disabled + label {
+  color: #FF6F91 !important;
+}
+
+.product-form__input--pill input[type='radio'] + label {
+  color: #FF6F91 !important;
+}
+
+/* Header Icon */
+.header__icon {
+  /* color: #FF6F91 !important; */
+}
+
+/* .header-wrapper--border-bottom */
+
+.header-wrapper--border-bottom {
+  border-bottom: unset !important;
+  box-shadow: 0 -1rem 4rem #FF6F91;
+}
+
+/* .cart-count-bubble */
+
+.cart-count-bubble {
+  position: absolute;
+  background-color: transparent;
+  font-size: 1.6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* .cart-count-bubble > i {
+  color: #FF6F91;
+}
+
+.cart-count-bubble > span {
+  color: white;
+  position: absolute;
+  font-size: 1.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}  */
+
+/* .header__icon, .header__icon--cart .icon */
+
+.header__icon, .header__icon--cart .icon {
+  fill: #FF6F91;
+  padding: .5rem;
 }

@@ -96,9 +96,9 @@
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                <span style="margin-rigth: 1rem; display:inline-block;">{{ 'products.product.add_to_cart' | t }}</span>
+                {% comment %} <span style="margin-rigth: 1rem; display:inline-block;">{{ 'products.product.add_to_cart' | t }}</span> {% endcomment %}
 
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}

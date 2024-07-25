@@ -26,7 +26,7 @@
     <p>
       <i class="fa-solid fa-percent hidden" style="color: lightcoral; text-decoration: underline;"></i> 
   
-      {{ 'general.my-custom-elements.main_product_offer_text_1' | t }} 
+      ⏰{{ 'general.my-custom-elements.main_product_offer_text_1' | t }} 
       
       <ins 
       style=" 
@@ -35,12 +35,11 @@
       background-color: rgb(var(--color-badge-background)); 
       color: rgb(var(--color-badge-foreground)); 
       border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
-      font-size: 1.2rem;
+      font-size: 1.7rem;
       padding: .4rem;
       border-radius: .3rem;
-      margin-right: .5rem;
       "
-      class="color-scheme-6"
+      class="color-{{ discount_color }}"
       >
         -{{ discount_percentage }}%
       </ins> {{ 'general.my-custom-elements.main_product_offer_text_2' | t }} 
