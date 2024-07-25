@@ -1,20 +1,19 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-transparent-yellow.png",
-    "logo_width": 150,
-    "type_header_font": "itc_conduit_n7",
-    "heading_scale": 110,
-    "type_body_font": "itc_conduit_n4",
+    "logo_width": 90,
+    "type_header_font": "assistant_n4",
+    "heading_scale": 100,
+    "type_body_font": "assistant_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
-    "spacing_grid_vertical": 16,
+    "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "default",
+    "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 16,
+    "buttons_radius": 0,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
@@ -28,7 +27,7 @@
     "variant_pills_shadow_blur": 5,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 16,
+    "inputs_radius": 0,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
@@ -82,7 +81,7 @@
     "media_shadow_blur": 5,
     "popup_border_thickness": 1,
     "popup_border_opacity": 10,
-    "popup_corner_radius": 16,
+    "popup_corner_radius": 0,
     "popup_shadow_opacity": 5,
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 4,
@@ -93,18 +92,17 @@
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
-    "badge_position": "top left",
-    "badge_corner_radius": 16,
-    "sale_badge_color_scheme": "scheme-1",
-    "sold_out_badge_color_scheme": "scheme-3",
-    "brand_headline": "Head",
-    "brand_description": "<p>Description<\/p>",
-    "brand_image": "shopify:\/\/shop_images\/logo-transparent-yellow.png",
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "scheme-bb5b918f-18a4-45ce-9c9b-4428164faa95",
+    "sold_out_badge_color_scheme": "scheme-bb5b918f-18a4-45ce-9c9b-4428164faa95",
+    "brand_headline": "",
+    "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/siamore.store",
-    "social_instagram_link": "https:\/\/www.instagram.com\/siamore.store\/",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
     "social_youtube_link": "",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@siamore.store",
+    "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -118,7 +116,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "cart_color_scheme": "scheme-1",
+    "cart_color_scheme": "scheme-bfa94d10-a3ef-4f33-bf07-0f2fcb946ced",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -137,10 +135,36 @@
 
     ],
     "blocks": {
-      "6603664506335945664": {
-        "type": "shopify:\/\/apps\/transtore-language-translate\/blocks\/switcher_embed_block\/afeffe82-e563-4f78-90f4-f1e3d96286c3",
+      "4777958630934280373": {
+        "type": "shopify:\/\/apps\/blaze-geolocation-redirect\/blocks\/MarketGeo-Pro\/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
         "disabled": false,
         "settings": {
+          "test_mode": false,
+          "blz_country_flag_enabled": true,
+          "resource": "country_currency_and_language",
+          "blz_title_innerHTML": "Choose your location",
+          "blz_title_font-size": 20,
+          "blz_title_text-align": "center",
+          "blz_title_color": "#000000",
+          "blz_body_innerHTML": "Please select your shipping destination country",
+          "blz_body_font-size": 16,
+          "blz_body_text-align": "center",
+          "blz_body_color": "#000000",
+          "blz_button_CTA_innerHTML": "Confirm",
+          "blz_button_CTA_addclasses": "filled",
+          "blz_storeSelector__cta_addclasses": "full_width",
+          "blz_button_CTA_color": "#d6c7c7",
+          "blz_button_CTA_background": "#000000",
+          "blz_button_CTA_border-color": "#000000",
+          "blz_button_CTA_border-radius": 5,
+          "blz_label_country_innerHTML": "Country",
+          "blz_label_language_innerHTML": "Language",
+          "blz_store_selector_select_addclasses": "blz_border__outline",
+          "blz_storeSelector_component_background": "#ffffff",
+          "blz_storeSelector_component_border-radius": 5,
+          "blz_action__close_display": false,
+          "blur_background": true,
+          "blz_Selector__custom_css": ""
         }
       }
     },
@@ -200,20 +224,9 @@
           "shadow": "#121212"
         }
       },
-      "scheme-fd4ed0dd-a0e1-4896-8683-59d7707b16dd": {
+      "scheme-bb5b918f-18a4-45ce-9c9b-4428164faa95": {
         "settings": {
-          "background": "#ffffff",
-          "background_gradient": "",
-          "text": "#fec53e",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c": {
-        "settings": {
-          "background": "#ffffff",
+          "background": "#ff0000",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#121212",
@@ -222,23 +235,12 @@
           "shadow": "#121212"
         }
       },
-      "scheme-06bb1c4a-bc27-4ed2-9c53-21ace5d3fd8d": {
-        "settings": {
-          "background": "#eb5570",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-4fc88280-4e18-4acc-9de5-a8cf88fe90e6": {
+      "scheme-bfa94d10-a3ef-4f33-bf07-0f2fcb946ced": {
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#000000",
-          "button": "#121212",
+          "text": "#121212",
+          "button": "#daa520",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"

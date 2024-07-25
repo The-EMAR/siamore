@@ -68,14 +68,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   transform: translateX(0);
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-  .drawer.active .drawer__inner {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
 .drawer__header {
   position: relative;
   padding: 1.5rem 0;

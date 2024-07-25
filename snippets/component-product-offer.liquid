@@ -1,0 +1,55 @@
+{{ 'component-offer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'countdown-timer.js' | asset_url }}" defer="defer"></script>
+
+{% assign countdown = countdown | default: 300 %}
+
+{%- liquid
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price | plus: 0.0
+  assign price = target.price | default: 1999 | plus: 0.0
+
+  assign discount_percentage = 0
+  if compare_at_price > price
+    assign discount_amount = compare_at_price | minus: price
+    assign discount_ratio = discount_amount | divided_by: compare_at_price | times: 100
+    assign discount_percentage = discount_ratio | ceil
+  endif
+-%}
+
+{% if compare_at_price != 0 %}
+  <div class="component-offer">
+    <p>
+      <i class="fa-solid fa-percent hidden" style="color: lightcoral; text-decoration: underline;"></i> 
+  
+      {{ 'general.my-custom-elements.main_product_offer_text_1' | t }} 
+      
+      <ins 
+      style=" 
+      font-weight: bold; 
+      text-decoration: unset; 
+      background-color: rgb(var(--color-badge-background)); 
+      color: rgb(var(--color-badge-foreground)); 
+      border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
+      font-size: 1.2rem;
+      padding: .4rem;
+      border-radius: .3rem;
+      margin-right: .5rem;
+      "
+      class="color-scheme-6"
+      >
+        -{{ discount_percentage }}%
+      </ins> {{ 'general.my-custom-elements.main_product_offer_text_2' | t }} 
+  
+      <br>{{ 'general.my-custom-elements.main_product_offer_text_3' | t }}
+  
+      <ins class="component__timer js-countdown-timer" data-countdown="{{ countdown }}">
+        <span>--:--:--:--</span>
+      </ins><!-- /.component__timer -->
+    </p>
+  </div><!-- /.component-offer -->
+{% endif %}

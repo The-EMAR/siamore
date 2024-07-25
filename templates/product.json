@@ -3,20 +3,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
         "title": {
           "type": "title",
-          "settings": {
-          }
-        },
-        "newsletter_popup_trigger_ngeX7P": {
-          "type": "newsletter_popup_trigger",
-          "disabled": true,
-          "settings": {
-            "newsletter_popup_trigger_text": "Get 20% discount for first purchase"
-          }
-        },
-        "price": {
-          "type": "price",
           "settings": {
           }
         },
@@ -27,13 +22,13 @@
             "swatch_shape": "circle"
           }
         },
-        "color_BkEeb7": {
-          "type": "color",
+        "offer_xfY3H3": {
+          "type": "offer",
           "settings": {
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "price": {
+          "type": "price",
           "settings": {
           }
         },
@@ -44,40 +39,9 @@
             "show_gift_card_recipient": true
           }
         },
-        "icon_with_text_MQLHRy": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "star",
-            "heading_1": "Европейски стандарти за качество",
-            "icon_2": "return",
-            "heading_2": "30 дни право на връщане",
-            "icon_3": "truck",
-            "heading_3": "Доставка с преглед и тест"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "collapsible_tab_PgHHqL": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Доставка и преглед",
-            "icon": "none",
-            "content": "<ol><li><strong>Обработка на поръчката:<\/strong> Вашата поръчка ще бъде обработена в рамките на 1-2 работни дни.<\/li><li><strong>Доставка:<\/strong> Ще получите известие, когато вашата поръчка е изпратена. Доставката обикновено отнема 1-3 работни дни.<\/li><li><strong>Преглед и тест:<\/strong> При получаване на поръчката, проверете за повреди или несъответствия. В случай на проблем, можете да се свържете с нас за връщане или замяна.<\/li><\/ol>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_DNbk9m": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Право на връщане",
-            "icon": "none",
-            "content": "<ul><li><strong>Срок за връщане:<\/strong> Можете да върнете продукт в рамките на 30 дни от датата на получаване.<\/li><li><strong>Условия за връщане:<\/strong> Продуктът трябва да е в оригиналната си опаковка, без следи от употреба.<\/li><li><strong>Замяна на продукт:<\/strong> Можете да замените продукт за друг размер, цвят или модел.<\/li><li><strong>Връщане на сума:<\/strong> Връщането на сумата се извършва в рамките на 30 дни от датата на получаване на върнатия продукт.<\/li><\/ul>",
-            "page": ""
           }
         },
         "share": {
@@ -88,46 +52,42 @@
         }
       },
       "block_order": [
+        "vendor",
         "title",
-        "newsletter_popup_trigger_ngeX7P",
-        "price",
         "variant_picker",
-        "color_BkEeb7",
-        "quantity_selector",
+        "offer_xfY3H3",
+        "price",
         "buy_buttons",
-        "icon_with_text_MQLHRy",
         "description",
-        "collapsible_tab_PgHHqL",
-        "collapsible_tab_DNbk9m",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-4fc88280-4e18-4acc-9de5-a8cf88fe90e6",
-        "media_size": "medium",
+        "color_scheme": "scheme-1",
+        "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "cover",
+        "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 32,
+        "padding_top": 36,
         "padding_bottom": 12
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "Препоръчани за теб",
+        "heading": "You may also like",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",

@@ -8,7 +8,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Вземи си 10% отстъпка с код: AMOR10",
+            "text": "Welcome to our store",
             "link": ""
           }
         }
@@ -17,10 +17,10 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "scheme-06bb1c4a-bc27-4ed2-9c53-21ace5d3fd8d",
+        "color_scheme": "scheme-1",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -29,15 +29,16 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "middle-center",
+        "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,

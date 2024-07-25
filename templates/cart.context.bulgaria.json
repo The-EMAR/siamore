@@ -1,0 +1,19 @@
+{
+  "parent": "cart.json",
+  "context": {
+    "market": "bulgaria"
+  },
+  "sections": {
+    "cart-footer": {
+      "settings": {
+      },
+      "blocks": {
+        "subtotal": {
+          "disabled": true,
+          "settings": {
+          }
+        }
+      }
+    }
+  }
+}

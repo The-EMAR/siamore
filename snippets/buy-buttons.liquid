@@ -55,7 +55,10 @@
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+          {% if product.selected_or_first_available_variant.available == false
+            or quantity_rule_soldout
+            or product.selected_or_first_available_variant == nil
+          %}
             disabled
           {% endif %}
           class="product-variant-id"
@@ -80,21 +83,37 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            {% if product.selected_or_first_available_variant.available == false
+              or quantity_rule_soldout
+              or product.selected_or_first_available_variant == nil
+            %}
               disabled
             {% endif %}
           >
             <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+              {%- if product.selected_or_first_available_variant == nil -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                <span style="margin-rigth: 1rem; display:inline-block;">{{ 'products.product.add_to_cart' | t }}</span>
+
+                <i class="fa-solid fa-heart"></i>
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
+            <button id="checkout-now" 
+            class="button" 
+            style="max-width: unset; width: 100%;"
+            >
+              <i class="fa-solid fa-dolly"></i>
+
+              <span style="margin-left: 1rem; display: inline-block;">{{ 'sections.cart.checkout' | t }}</span>
+            </button>
+            
+            {% comment %} {{ form | payment_button }} {% endcomment %}
           {%- endif -%}
         </div>
       {%- endform -%}

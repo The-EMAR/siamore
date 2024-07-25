@@ -1,161 +1,75 @@
 {
   "sections": {
-    "section_image_slider_mWkXJH": {
-      "type": "section-image-slider",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "slide_axPYxx": {
-          "type": "slide",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/new_collection.png",
-            "mobile_image": "shopify:\/\/shop_images\/new_collection.png",
-            "link": "shopify:\/\/collections\/летни-рокли"
-          }
-        }
-      },
-      "block_order": [
-        "slide_axPYxx"
-      ],
-      "settings": {
-        "container_full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section_collections_release_3Gcj8x": {
-      "type": "section-collections-release",
-      "settings": {
-        "collections": [
-          "официални-рокли",
-          "къси-рокли",
-          "дамски-сет"
-        ],
-        "color_scheme": "scheme-d8f7a20f-c34e-4104-9e6b-f2f65590647c",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "section_products_release_BWwRmf": {
-      "type": "section-products-release",
-      "settings": {
-        "heading": "Най-продавани",
-        "products": [
-          "дамска-рокля-amanda",
-          "дамска-рокля-chloe",
-          "дамска-рокля-jyotis",
-          "дамска-рокля-hailey-розова",
-          "дамска-рокля-alexis"
-        ],
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "section_collection_release_bgwtFL": {
-      "type": "section-collection-release",
-      "settings": {
-        "enable_slider_on_desktop": false,
-        "heading": "Най-нови",
-        "collection": "официални-рокли",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "section_image_slider_teD4AM": {
-      "type": "section-image-slider",
-      "blocks": {
-        "slide_pjia47": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/QXo0vGvMRpOHtmy5IyacLw.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/QXo0vGvMRpOHtmy5IyacLw.jpg",
-            "link": "shopify:\/\/collections\/летни-рокли"
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
           }
         },
-        "slide_4PnjNJ": {
-          "type": "slide",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/kESByWn6QLy4gzv3IHEoQA.webp",
-            "mobile_image": "shopify:\/\/shop_images\/kESByWn6QLy4gzv3IHEoQA.webp",
-            "link": "shopify:\/\/collections\/летни-рокли"
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "slide_pjia47",
-        "slide_4PnjNJ"
+        "heading",
+        "button"
       ],
-      "disabled": true,
       "settings": {
-        "container_full_width": false,
-        "padding_top": 0,
-        "padding_bottom": 16
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
-    "section_collection_release_kXrKtk": {
-      "type": "section-collection-release",
+    "featured_collection": {
+      "type": "featured-collection",
       "settings": {
-        "enable_slider_on_desktop": false,
-        "heading": "ЕЛЕГАНТНИ РОКЛИ",
-        "collection": "къси-рокли",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section_collection_release_eth8Bn": {
-      "type": "section-collection-release",
-      "disabled": true,
-      "settings": {
-        "enable_slider_on_desktop": true,
-        "heading": "Аксесоари",
-        "collection": "летни-рокли",
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "section_collection_release_PNPJcR": {
-      "type": "section-collection-release",
-      "disabled": true,
-      "settings": {
-        "enable_slider_on_desktop": true,
-        "heading": "Чанти",
-        "collection": "летни-рокли",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section_collection_release_t8MUYg": {
-      "type": "section-collection-release",
-      "disabled": true,
-      "settings": {
-        "enable_slider_on_desktop": true,
-        "heading": "Обеци",
-        "collection": "летни-рокли",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "padding_top": 0,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "section_image_slider_mWkXJH",
-    "section_collections_release_3Gcj8x",
-    "section_products_release_BWwRmf",
-    "section_collection_release_bgwtFL",
-    "section_image_slider_teD4AM",
-    "section_collection_release_kXrKtk",
-    "section_collection_release_eth8Bn",
-    "section_collection_release_PNPJcR",
-    "section_collection_release_t8MUYg"
+    "image_banner",
+    "featured_collection"
   ]
 }

@@ -86,9 +86,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation {
   padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .menu-drawer__inner-submenu {
