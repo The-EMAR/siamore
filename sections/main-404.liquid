@@ -10,7 +10,7 @@
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
+<div class="template-404 page-width page-margin center color-{{ section.settings.color_scheme }}">
   <p>
     {{ 'templates.404.subtext' | t }}
   </p>
@@ -21,3 +21,17 @@
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
+
+{% schema %}
+  {
+  "name": "Main 404",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ]
+}  
+{% endschema %}

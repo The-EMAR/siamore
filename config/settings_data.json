@@ -101,10 +101,10 @@
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/siamore.store",
+    "social_instagram_link": "https:\/\/www.instagram.com\/siamore.store\/",
     "social_youtube_link": "",
-    "social_tiktok_link": "",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@siamore.store",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -121,7 +121,7 @@
       "панталони",
       "рокли"
     ],
-    "cart_color_scheme": "scheme-bfa94d10-a3ef-4f33-bf07-0f2fcb946ced",
+    "cart_color_scheme": "scheme-91f79a96-22a3-4942-995a-b01fa90f21f7",
     "cart_drawer_collection": "рокли",
     "sections": {
       "main-password-header": {
@@ -293,6 +293,17 @@
           "button": "#ff6f91",
           "button_label": "#ffffff",
           "secondary_button_label": "#12b647",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-91f79a96-22a3-4942-995a-b01fa90f21f7": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#000000",
+          "button": "#12b647",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }

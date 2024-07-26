@@ -46,6 +46,27 @@
           "settings": {
           }
         },
+        "icon_with_text_6jgix4": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "star",
+            "heading_1": "European quality standards",
+            "icon_2": "return",
+            "heading_2": "14 days right of return",
+            "icon_3": "truck",
+            "heading_3": "Delivery with inspection and test"
+          }
+        },
+        "collapsible_tab_pn7rAk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return and refund policy",
+            "icon": "none",
+            "content": "<ol><li><strong>Return period:<\/strong> You can return a product within 14 days from the date of receipt.<br\/>Return conditions: The product must be in its original packaging, without signs of use.<\/li><li><strong>Product exchange:<\/strong> You can exchange a product for another size, color or model.<\/li><li><strong>Refund: <\/strong>The refund is made within 30 days from the date of receipt of the returned product.<br\/>Getting the money back is done via bank transfer.<\/li><\/ol>",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -61,6 +82,8 @@
         "price",
         "buy_buttons",
         "description",
+        "icon_with_text_6jgix4",
+        "collapsible_tab_pn7rAk",
         "share"
       ],
       "settings": {
