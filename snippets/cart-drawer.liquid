@@ -28,10 +28,18 @@
       tabindex="-1"
     >
       {%- if cart == empty -%}
-        <div class="drawer__inner-empty">
-          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+        <div class="drawer__inner-empty {% if settings.cart_drawer_collections != blank %}catalog{% endif %}">
+          {% comment %} If logic here {% endcomment %}
+          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}" {% if settings.cart_drawer_collections == blank %}style="flex: 1;"{% endif %}>
             <div class="cart-drawer__empty-content">
-              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+              
+              {% comment %} If logic here {% endcomment %}
+               {% if settings.cart_drawer_collections != blank %}
+                <h2 class="cart__empty-text">{{ 'sections.cart.cart_catalog_show' | t }}</h2>
+              {% else %}
+                <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+              {% endif %}
+
               <button
                 class="drawer__close"
                 type="button"
@@ -40,7 +48,9 @@
               >
                 {% render 'icon-close' %}
               </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
+
+              {% comment %} If logic here {% endcomment %}
+              <a href="{{ routes.all_products_collection_url }}" class="button {% if settings.cart_drawer_collections != blank %} hidden{% endif %}">
                 {{ 'general.continue_shopping' | t }}
               </a>
 
@@ -52,10 +62,14 @@
               {%- endif -%}
             </div>
           </div>
-          {%- if settings.cart_drawer_collection != blank -%}
-            <div class="cart-drawer__collection">
-              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
-            </div>
+
+
+          {%- if settings.cart_drawer_collections != blank -%}
+            {% for collection in settings.cart_drawer_collections %}
+              <div class="cart-drawer__collection">
+                {% render 'card-collection', card_collection: collection, columns: 2 %}
+              </div>
+            {% endfor %}
           {%- endif -%}
         </div>
       {%- endif -%}

@@ -116,9 +116,13 @@
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_vendor": false,
-    "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "show_cart_note": true,
+    "cart_drawer_collections": [
+      "панталони",
+      "рокли"
+    ],
     "cart_color_scheme": "scheme-bfa94d10-a3ef-4f33-bf07-0f2fcb946ced",
+    "cart_drawer_collection": "рокли",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
