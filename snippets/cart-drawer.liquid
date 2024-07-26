@@ -475,19 +475,21 @@
                 {% assign found_collection = null %}
   
                 {% for collection in first_cart_item.product.collections %}
-                  {% if collection.metafields.custom.associate_with_collection != 'EmptyDrop' %}
+                  {% if collection.metafields.custom.associate_with_collection != blank %}
                     {% assign found_collection = collections[collection.metafields.custom.associate_with_collection] %}
                   {% endif %}
                 {% endfor %}
-                
+ 
                 {% if found_collection %}
                   {% comment %} <h3>Products in {{ found_collection.title }}</h3> {% endcomment %}
                   <p>
-                    <strong style="color: gold;"> {{ 'general.my-custom-elements.product_offer_heading' | t }} </strong> 
-                    <br> {{ 'general.my-custom-elements.product_offer_content' | t }}
+                    <strong style="color: #ff6f91;"> {{ 'general.my-custom-elements.product_offer_heading' | t }} </strong> 
+                    <br> 
+                    Поздравления, спечелихте допълнителна <span style="color: red; font-size: 1.7rem; font-weight: bold;">-10%</span> отстъпка за продукт от категорията
+                    {% comment %} {{ 'general.my-custom-elements.product_offer_content' | t }} {% endcomment %}
                     <a 
                     href="{{ found_collection.url }}"
-                    style="color: gold;"
+                    style="color: #ff6f91; font-weight: bold; text-decoration: none;"
                     >
                       "{{ found_collection.title | escape }}"
                     </a>

@@ -116,10 +116,20 @@
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_vendor": false,
-    "show_cart_note": true,
+    "show_cart_note": false,
     "cart_drawer_collections": [
-      "панталони",
-      "рокли"
+      "официални-рокли",
+      "летни-рокли",
+      "къси-рокли",
+      "елегантни-рокли",
+      "дънки",
+      "дамски-сет",
+      "дамски-панталон",
+      "поли",
+      "сака",
+      "ризи",
+      "тениски",
+      "гащеризони"
     ],
     "cart_color_scheme": "scheme-91f79a96-22a3-4942-995a-b01fa90f21f7",
     "cart_drawer_collection": "рокли",
@@ -140,40 +150,6 @@
     "content_for_index": [
 
     ],
-    "blocks": {
-      "4777958630934280373": {
-        "type": "shopify:\/\/apps\/blaze-geolocation-redirect\/blocks\/MarketGeo-Pro\/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
-        "disabled": false,
-        "settings": {
-          "test_mode": false,
-          "blz_country_flag_enabled": true,
-          "resource": "country_currency_and_language",
-          "blz_title_innerHTML": "Choose your location",
-          "blz_title_font-size": 20,
-          "blz_title_text-align": "center",
-          "blz_title_color": "#000000",
-          "blz_body_innerHTML": "Please select your shipping destination country",
-          "blz_body_font-size": 16,
-          "blz_body_text-align": "center",
-          "blz_body_color": "#000000",
-          "blz_button_CTA_innerHTML": "Confirm",
-          "blz_button_CTA_addclasses": "filled",
-          "blz_storeSelector__cta_addclasses": "full_width",
-          "blz_button_CTA_color": "#d6c7c7",
-          "blz_button_CTA_background": "#000000",
-          "blz_button_CTA_border-color": "#000000",
-          "blz_button_CTA_border-radius": 5,
-          "blz_label_country_innerHTML": "Country",
-          "blz_label_language_innerHTML": "Language",
-          "blz_store_selector_select_addclasses": "blz_border__outline",
-          "blz_storeSelector_component_background": "#ffffff",
-          "blz_storeSelector_component_border-radius": 5,
-          "blz_action__close_display": false,
-          "blur_background": true,
-          "blz_Selector__custom_css": ""
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -304,6 +280,28 @@
           "button": "#12b647",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#ff6f91",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ff6f91",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-ebec5882-38c5-46ab-897a-b75a649372de": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#12b647",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ff6f91",
           "shadow": "#121212"
         }
       }

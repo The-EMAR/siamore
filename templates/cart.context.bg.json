@@ -1,0 +1,15 @@
+{
+  "parent": "cart.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "cart-footer": {
+      "settings": {
+        "color_scheme": "scheme-2fea4244-ed20-4342-983c-395d30cc311f"
+      },
+      "blocks": {
+      }
+    }
+  }
+}

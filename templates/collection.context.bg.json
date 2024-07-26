@@ -1,0 +1,17 @@
+{
+  "parent": "collection.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "banner": {
+      "settings": {
+        "color_scheme": "scheme-2fea4244-ed20-4342-983c-395d30cc311f",
+        "show_collection_description": true,
+        "show_collection_image": false
+      },
+      "blocks": {
+      }
+    }
+  }
+}

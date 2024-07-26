@@ -1,123 +1,49 @@
 {
+  "parent": "index.json",
+  "context": {
+    "market": "bg"
+  },
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "featured_collection_TGjcn": {
+      "type": "featured-collection",
+      "disabled": false,
+      "settings": {
+        "title": "Къси рокли",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "къси-рокли",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "header-29456226a6d4daf14fc3049ed7e3d385": null,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "header-1d5b7da8f8be88d22ce02830e6ee862f": null,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "header-24cc5b50b11a9112e20402cb3d6be6f8": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
       "blocks": {
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Виж още",
-            "button_link_1": "shopify:\/\/collections\/елегантни-рокли",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
       },
       "block_order": [
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Thank_You_3.png",
-        "image_overlay_opacity": 40,
-        "image_height": "adapt",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
+
+      ]
     },
-    "featured_collection": {
+    "featured_collection_T6eUA": {
       "type": "featured-collection",
-      "settings": {
-        "title": "Официални рокли",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "официални-рокли",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_hGPpxE": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Летни рокли",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "летни-рокли",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_kHHwKL": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Елегантни рокли",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "елегантни-рокли",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_h68DD8": {
-      "type": "featured-collection",
+      "disabled": false,
       "settings": {
         "title": "Дамски сет",
         "heading_size": "h1",
@@ -132,24 +58,98 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "header-845084e76beb35aaeeae63fd34735b1d": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
+        "header-f19145aa55c827979ae3d8881a46ba51": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
+        "header-f72adb0c349424c1ec9b6a03f4c10178": null,
         "padding_top": 36,
         "padding_bottom": 36
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "featured_collection_7icPK": {
+      "type": "featured-collection",
+      "disabled": false,
+      "settings": {
+        "title": "Летни рокли",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "летни-рокли",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "header-c0ebb1dd57fe820de55c7bb89508700d": null,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "header-634bf314b89c222875f69946cbde8e21": null,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "header-7d3d52b6974bf9e3d65c877bab978122": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "image_banner": {
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Thank_You_3.png",
+        "image_overlay_opacity": 10,
+        "image_height": "adapt",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "button": {
+          "disabled": false,
+          "settings": {
+            "button_label_1": "Виж още",
+            "button_link_1": "shopify:\/\/collections\/елегантни-рокли"
+          }
+        }
+      }
+    },
+    "featured_collection": {
+      "settings": {
+        "title": "Официални рокли",
+        "heading_size": "h1",
+        "collection": "официални-рокли",
+        "show_view_all": true,
+        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "swipe_on_mobile": false
+      },
+      "blocks": {
       }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "featured_collection_hGPpxE",
-    "featured_collection_kHHwKL",
-    "featured_collection_h68DD8"
+    "featured_collection_7icPK",
+    "featured_collection_TGjcn",
+    "featured_collection_T6eUA"
   ]
 }

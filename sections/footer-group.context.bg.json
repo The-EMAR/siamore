@@ -1,0 +1,23 @@
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "footer": {
+      "settings": {
+        "enable_follow_on_shop": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "newsletter_heading": "Абонирайте се за нас"
+      },
+      "blocks": {
+        "image_ka9kVm": {
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-transparent-white.png"
+          }
+        }
+      }
+    }
+  }
+}
