@@ -98,7 +98,11 @@ cart-items .title-wrapper-with-link {
 }
 
 .cart-item__discounted-prices .cart-item__old-price {
-  font-size: 1.4rem;
+  font-size: 1.4rem
+}
+
+.cart-item__discounted-prices .cart-item__old-price .trans-money {
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 .cart-item__old-price {
@@ -113,6 +117,10 @@ cart-items .title-wrapper-with-link {
   font-size: 1.4rem;
   word-break: break-word;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
+}
+
+.product-option .trans-money {
+  color: #12b647;
 }
 
 .cart-item cart-remove-button {

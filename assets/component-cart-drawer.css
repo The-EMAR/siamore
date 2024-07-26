@@ -264,6 +264,10 @@ cart-drawer-items {
   grid-column: 2 / 4;
 }
 
+.cart-drawer .cart-item__details .product-option .trans-money {
+  /* color: green; */
+}
+
 .cart-drawer .cart-item__totals {
   pointer-events: none;
   display: flex;

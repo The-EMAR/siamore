@@ -3817,3 +3817,9 @@ details-disclosure>details {
     grid-row: span 2 / 6;
   }
 }
+
+/* Cart Price Colors */
+
+.cart-drawer .price .price--end {
+  color: #12b647 !important;
+}
