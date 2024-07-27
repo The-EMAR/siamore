@@ -284,7 +284,8 @@
       "title": "Вашата количка",
       "caption": "Артикули в количката",
       "remove_title": "Премахване на {{ title }}",
-      "checkout": "Създаване на доставка",
+      "checkout": "Поръчай",
+      "delivery": "Завърши количката",
       "empty": "Количката ви е празна.",
       "cart_error": "При актуализирането на количката ви възникна грешка. Опитайте отново.",
       "cart_quantity_error_html": "Можете да добавите само {{ quantity }} броя от този артикул в количката си.",
@@ -301,7 +302,7 @@
         "title": "Имате профил?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Влезте<\/a> за по-бързо преминаване към плащане."
       },
-      "estimated_total": "Очаквана обща сума",
+      "estimated_total": "Междинна сума",
       "new_estimated_total": "Нова очаквана обща сума",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "С включено мито и данъци. Отстъпките и <a href=\"{{ link }}\">доставката<\/a> се изчисляват при плащане.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "С включено мито и данъци. Отстъпките и доставката се изчисляват при плащане.",

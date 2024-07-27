@@ -304,7 +304,11 @@ cart-drawer-items {
   margin-top: 1rem;
 }
 
+/* Changes here */
+
 .cart-drawer .totals {
+  padding: 0 0 2rem;
+  margin-top: 0;
   justify-content: space-between;
 }
 

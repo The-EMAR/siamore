@@ -559,8 +559,8 @@
             {%- endif -%}
           </div>
 
-          <div class="totals hidden" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+          <div class="totals" role="status">
+            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}:</h2>
             <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
@@ -618,9 +618,7 @@
               disabled
             {% endif %}
           >
-            <i class="fa-solid fa-dolly"></i>
-
-            <span style="margin-left: 1rem; display: inline-block;">{{ 'sections.cart.checkout' | t }}</span>
+            <span style="margin-left: 1rem; display: inline-block;">{{ 'sections.cart.delivery' | t }}</span>
           </button>
         </div>
       </div>
