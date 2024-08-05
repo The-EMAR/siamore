@@ -1459,6 +1459,27 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       },
       {
+        "type": "select",
+        "id": "cart_drawer_collections_image_ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
+          },
+          {
+            "value": "square",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
+          }
+        ],
+        "default": "adapt",
+        "label": "t:sections.main-list-collections.settings.image_ratio.label",
+        "info": "t:sections.main-list-collections.settings.image_ratio.info"
+      },
+      {
         "type": "color_scheme",
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",

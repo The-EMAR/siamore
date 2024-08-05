@@ -1,0 +1,28 @@
+{
+  "parent": "list-collections.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "main": {
+      "settings": {
+        "title": "Категории",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      },
+      "blocks": {
+      }
+    },
+    "banner": {
+      "settings": {
+        "heading": "Само сега! Лятна разпродажба",
+        "image": "shopify:\/\/shop_images\/1499cbf3-d5b4-46aa-a142-dd4c010446e3_1_39378c52-7a24-4e7d-870d-bb508a5c93ed.jpg",
+        "color_scheme": "scheme-e71b8dd5-68ec-451a-b59f-2a7679fe7463",
+        "discount": "-40%"
+      },
+      "blocks": {
+      }
+    }
+  }
+}

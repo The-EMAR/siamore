@@ -4,6 +4,43 @@
     "market": "bg"
   },
   "sections": {
+    "featured_collection_7icPK": {
+      "type": "featured-collection",
+      "disabled": false,
+      "settings": {
+        "title": "Летни рокли",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "летни-рокли",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "header-61006ef47596d3595331b6a00c204706": null,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "header-36b9735da384988fbb9c613b44497e9f": null,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "header-f69253a628ed450f3218a55da35581ce": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
     "featured_collection_TGjcn": {
       "type": "featured-collection",
       "disabled": false,
@@ -21,17 +58,17 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-29456226a6d4daf14fc3049ed7e3d385": null,
+        "header-1344ebce9189da260d65098aabd7aa8a": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "header-1d5b7da8f8be88d22ce02830e6ee862f": null,
+        "header-50e4f03701614766d3d86828d755e91c": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "header-24cc5b50b11a9112e20402cb3d6be6f8": null,
+        "header-b156584bb4af94e427bceb8968e8c062": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -58,17 +95,17 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-845084e76beb35aaeeae63fd34735b1d": null,
+        "header-483b38ed61bf8962de9b992e8df29f8c": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "header-f19145aa55c827979ae3d8881a46ba51": null,
+        "header-2473d7ac86699811a23840a5fc51df8d": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "header-f72adb0c349424c1ec9b6a03f4c10178": null,
+        "header-395476b2e79e062209ba78db9acf6243": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -77,60 +114,6 @@
       "block_order": [
 
       ]
-    },
-    "featured_collection_7icPK": {
-      "type": "featured-collection",
-      "disabled": false,
-      "settings": {
-        "title": "Летни рокли",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "летни-рокли",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-c0ebb1dd57fe820de55c7bb89508700d": null,
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "header-634bf314b89c222875f69946cbde8e21": null,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "header-7d3d52b6974bf9e3d65c877bab978122": null,
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-      },
-      "block_order": [
-
-      ]
-    },
-    "image_banner": {
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Thank_You_3.png",
-        "image_overlay_opacity": 10,
-        "image_height": "adapt",
-        "color_scheme": "scheme-3"
-      },
-      "blocks": {
-        "button": {
-          "disabled": false,
-          "settings": {
-            "button_label_1": "Виж още",
-            "button_link_1": "shopify:\/\/collections\/елегантни-рокли"
-          }
-        }
-      }
     },
     "featured_collection": {
       "settings": {
@@ -143,12 +126,48 @@
       },
       "blocks": {
       }
+    },
+    "featured_collection_h68DD8": {
+      "settings": {
+        "title": "Къси панталони",
+        "collection": "къси-панталони"
+      },
+      "blocks": {
+      }
+    },
+    "video_GK8Ti": {
+      "type": "video",
+      "disabled": false,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "header-aceabc59cfa8cd6704700768d10bd676": null,
+        "video": "shopify:\/\/files\/videos\/Facebook & Instagram Ads -  Template (1).mp4",
+        "header-68274e242ca0f0a8fbdae5d13d6861a3": null,
+        "paragraph-67680a349b5bebf94d3c02673d280613": null,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": null,
+        "description": "",
+        "header-3bbc9736837206f787d528026fc234ba": null,
+        "full_width": true,
+        "color_scheme": "",
+        "header-0c5c5a417f8f2ffefca47f8f1177ca95": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
     }
   },
   "order": [
-    "image_banner",
+    "video_GK8Ti",
     "featured_collection",
     "featured_collection_7icPK",
+    "featured_collection_h68DD8",
     "featured_collection_TGjcn",
     "featured_collection_T6eUA"
   ]

@@ -610,7 +610,7 @@ class ModalDialog extends HTMLElement {
         if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) this.hide();
       });
     } else {
-      this.addEventListener('click', (event) => {
+      this.addEventListener('click', (event) => {        
         if (event.target === this) this.hide();
       });
     }
@@ -1266,3 +1266,7 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+window.addEventListener('DOMContentLoaded',()=>{
+  document.querySelector('.deferred-media__poster')?.click();
+})

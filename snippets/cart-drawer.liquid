@@ -67,7 +67,7 @@
           {%- if settings.cart_drawer_collections != blank -%}
             {% for collection in settings.cart_drawer_collections %}
               <div class="cart-drawer__collection">
-                {% render 'card-collection', card_collection: collection, columns: 2 %}
+                {% render 'card-collection', card_collection: collection, columns: 2, media_aspect_ratio: settings.cart_drawer_collections_image_ratio, %}
               </div>
             {% endfor %}
           {%- endif -%}

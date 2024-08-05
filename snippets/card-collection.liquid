@@ -109,6 +109,27 @@
               </p>
             {%- endif -%}
           </div>
+
+          <div class="card__badge {{ settings.badge_position }}">
+            {%- if card_collection.metafields.custom.collection_discount_string.value == blank -%}
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }} hidden"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            {%- else -%}
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                style="margin-left: -1rem;"
+              >
+
+                {{ card_collection.metafields.custom.collection_discount_string.value }}
+                {% comment %} {{- 'products.product.on_sale' | t -}} {% endcomment %}
+              </span>
+            {%- endif -%}
+          </div>
         </div>
       {%- endif -%}
     </div>

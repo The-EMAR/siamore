@@ -6,9 +6,9 @@
   "sections": {
     "banner": {
       "settings": {
-        "color_scheme": "scheme-2fea4244-ed20-4342-983c-395d30cc311f",
         "show_collection_description": true,
-        "show_collection_image": false
+        "show_collection_image": true,
+        "color_scheme": "scheme-e71b8dd5-68ec-451a-b59f-2a7679fe7463"
       },
       "blocks": {
       }

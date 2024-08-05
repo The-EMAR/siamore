@@ -1,0 +1,7 @@
+.discount-offer {
+  text-shadow: 0 .1rem .7rem white;
+}
+
+.discount-offer > p > span {
+  font-size: 6rem;
+}

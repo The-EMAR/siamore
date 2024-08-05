@@ -1,5 +1,6 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'component-discount-offer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   @media screen and (max-width: 749px) {
@@ -15,6 +16,18 @@
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
+
+        {% if collection.metafields.custom.collection_discount_string.value != blank %}
+          <div class="discount-offer">
+            <p>
+              До
+              <br />
+              <span>{{ collection.metafields.custom.collection_discount_string.value }}</span>
+              <br />
+              намаления
+            </p>
+          </div><!-- /.discount-offer -->
+        {% endif %}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
