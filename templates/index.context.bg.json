@@ -4,6 +4,33 @@
     "market": "bg"
   },
   "sections": {
+    "video_GK8Ti": {
+      "type": "video",
+      "disabled": false,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "header-6fba67828c3742584456afbe8b53ab35": null,
+        "video": "shopify:\/\/files\/videos\/Facebook & Instagram Ads -  Template (1).mp4",
+        "header-70db4e13549ae0f566eca32922956924": null,
+        "paragraph-bde8ab095f8fe5b5c36c784de2532f34": null,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": null,
+        "description": "",
+        "header-1640ed5a997f8bf292510d4c54c2267c": null,
+        "full_width": true,
+        "color_scheme": "",
+        "header-e3c1d709949e9569595b33c34fa798c8": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
     "featured_collection_7icPK": {
       "type": "featured-collection",
       "disabled": false,
@@ -21,17 +48,17 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-61006ef47596d3595331b6a00c204706": null,
+        "header-a22e3c1fd4da886310c32e88f0840d5a": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "header-36b9735da384988fbb9c613b44497e9f": null,
+        "header-d7b4d7443d4d49aa12a596ac4298cf85": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "header-f69253a628ed450f3218a55da35581ce": null,
+        "header-bd4a01efd05de4ee8af6e19ee68caf92": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -58,17 +85,17 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-1344ebce9189da260d65098aabd7aa8a": null,
+        "header-e0b790f88dea2e069119229bb6a28976": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "header-50e4f03701614766d3d86828d755e91c": null,
+        "header-c91f0d3acb4bce266fa4560e48d87a05": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "header-b156584bb4af94e427bceb8968e8c062": null,
+        "header-5236ff7ba91aa4731d9ceaa98c9d42f0": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -95,17 +122,17 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
-        "header-483b38ed61bf8962de9b992e8df29f8c": null,
+        "header-2cca17ed85b0b7c0570e248c7706d0b0": null,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "header-2473d7ac86699811a23840a5fc51df8d": null,
+        "header-13e02c013bd18f68e8225aa516fcfacc": null,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "header-395476b2e79e062209ba78db9acf6243": null,
+        "header-48f75c2b5e791657f69e2b5e347e76af": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -135,26 +162,36 @@
       "blocks": {
       }
     },
-    "video_GK8Ti": {
-      "type": "video",
+    "featured_collection_FEjbQ": {
+      "type": "featured-collection",
       "disabled": false,
       "settings": {
-        "heading": "",
+        "title": "Гащеризони",
         "heading_size": "h1",
-        "enable_video_looping": true,
-        "header-aceabc59cfa8cd6704700768d10bd676": null,
-        "video": "shopify:\/\/files\/videos\/Facebook & Instagram Ads -  Template (1).mp4",
-        "header-68274e242ca0f0a8fbdae5d13d6861a3": null,
-        "paragraph-67680a349b5bebf94d3c02673d280613": null,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "cover_image": null,
         "description": "",
-        "header-3bbc9736837206f787d528026fc234ba": null,
-        "full_width": true,
-        "color_scheme": "",
-        "header-0c5c5a417f8f2ffefca47f8f1177ca95": null,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "show_description": false,
+        "description_style": "body",
+        "collection": "гащеризони",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-a69579ba-6f86-48b9-b6de-9e7898dd8117",
+        "header-1a4679fe45c33b303f862bba9f5bb0f0": null,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "header-e669ed5aedb3c48cec5410a3d7165afb": null,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "header-fb891bd3d0fba49339e6444490e5f862": null,
+        "padding_top": 36,
+        "padding_bottom": 36
       },
       "blocks": {
       },
@@ -166,9 +203,10 @@
   "order": [
     "video_GK8Ti",
     "featured_collection",
+    "featured_collection_TGjcn",
+    "featured_collection_T6eUA",
     "featured_collection_7icPK",
     "featured_collection_h68DD8",
-    "featured_collection_TGjcn",
-    "featured_collection_T6eUA"
+    "featured_collection_FEjbQ"
   ]
 }

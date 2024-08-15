@@ -3723,8 +3723,20 @@ details-disclosure>details {
   grid-column-end: 3 !important;
 }
 
+.cart-drawer__empty-content {
+  position: relative;
+}
+
+.cart-drawer__empty-content .drawer__close {
+  color: white;
+  top: 13px;
+}
+
 .drawer__inner-empty.catalog .cart__empty-text {
-  margin: 4.5rem 0 4.5rem 0 !important;
+  padding: 2rem 0;
+  background: #ff6f91;
+  margin: 0 -3rem 1rem !important;
+  color: white;
 }
 
 .drawer__inner-empty.catalog .cart-drawer__collection {
