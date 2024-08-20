@@ -1,0 +1,15 @@
+{
+  "parent": "page.ty-page.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "main": {
+      "disabled": true,
+      "settings": {
+      },
+      "blocks": {
+      }
+    }
+  }
+}

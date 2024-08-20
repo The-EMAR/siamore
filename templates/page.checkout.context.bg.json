@@ -1,0 +1,22 @@
+{
+  "parent": "page.checkout.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "main": {
+      "disabled": true,
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "custom-checkout": {
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo-transparent-black_716e7a7c-a10f-4765-a58a-d8556c783b3b.png"
+      },
+      "blocks": {
+      }
+    }
+  }
+}
