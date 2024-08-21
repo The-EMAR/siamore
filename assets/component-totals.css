@@ -4,6 +4,13 @@
   align-items: flex-end;
 }
 
+/* Mobile */
+@media (max-width: 767px) {
+ .totals {
+  justify-content: space-between;
+ } 
+}
+
 .totals > * {
   font-size: 1.6rem;
   margin: 0;

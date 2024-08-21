@@ -1,0 +1,447 @@
+{{ 'custom-checkout.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'custom-checkout.js' | asset_url }}" defer="defer"></script>
+
+{% if cart != empty %}
+  <div class="custom-checkout">
+    <div class="page-width">
+      <div class="custom__inner">
+        <header class="custom__head">
+          {% if section.settings.logo != blank %}
+            {%- assign logo = section.settings.logo -%}
+            {{ logo | image_url: width: logo.width | image_tag: class: 'custom__image', loading: 'lazy' }}
+          {% endif %}
+        </header><!-- /.custom__head -->
+  
+        <div class="accordions">
+          <ul>
+            <li class="hidden">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <span></span>
+  
+                  <h3>Плащане с карта</h3>
+                </div><!-- /.accordion__head -->
+  
+                <div class="accordion__body">
+                  <div class="cart">
+                    <span>Cart</span>
+                  </div><!-- /.cart -->
+                </div><!-- /.accordion__body -->
+              </div><!-- /.accordion -->
+            </li>
+
+            <li>
+              <div class="accordion">
+                <div class="accordion__head">
+                  <span></span>
+  
+                  <h3>Наложен платеж</h3>
+                </div><!-- /.accordion__head -->
+  
+                <div class="accordion__body">
+                  <div class="cod">  
+                    <div class="custom__form-wrapper">
+                      <h1 style="text-align: center;">Данни за доставка</h1>
+
+                      {%- form 'contact', id: 'ContactForm', class: 'custom__form' -%}                      
+                        <div class="hidden">
+                          {%- if form.posted_successfully? -%}
+                            <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                              {% render 'icon-success' %}
+                              {{ 'templates.contact.form.post_success' | t }}
+                            </h2>
+                          {%- elsif form.errors -%}
+                            <div class="form__message">
+                              <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                                {% render 'icon-error' %}
+                                {{ 'templates.contact.form.error_heading' | t }}
+                              </h2>
+                            </div>
+                            <ul class="form-status-list caption-large" role="list">
+                              <li>
+                                <a href="#ContactForm-email" class="link">
+                                  {{ form.errors.translated_fields.email | capitalize }}
+                                  {{ form.errors.messages.email }}
+                                </a>
+                              </li>
+                            </ul>
+                          {%- endif -%}
+                        </div>
+                  
+                        <div class="field">
+                          <input
+                            class="field__input"
+                            autocomplete="name"
+                            type="text"
+                            id="ContactForm-name"
+                            name="contact[{{ 'templates.contact.form.name' | t }}]"
+                            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                            placeholder="{{ 'templates.contact.form.name' | t }}"
+                            aria-required="true"
+                            required
+                          >
+                          <label class="field__label" for="ContactForm-name">Име</label>
+                        </div>
+                
+                        <div class="field field--with-error">
+                          <input
+                            autocomplete="email"
+                            type="email"
+                            id="ContactForm-email"
+                            class="field__input"
+                            name="contact[email]"
+                            spellcheck="false"
+                            autocapitalize="off"
+                            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                            aria-required="true"
+                            required
+                            {% if form.errors contains 'email' %}
+                              aria-invalid="true"
+                              aria-describedby="ContactForm-email-error"
+                            {% endif %}
+                            placeholder="{{ 'templates.contact.form.email' | t }}"
+                          >
+                          <label class="field__label" for="ContactForm-email">
+                            Имейл 
+                          </label
+                          >
+                          {%- if form.errors contains 'email' -%}
+                            <small class="contact__field-error" id="ContactForm-email-error">
+                              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                              <span class="form__message">
+                                {%- render 'icon-error' -%}
+                                {{- form.errors.translated_fields.email | capitalize }}
+                                {{ form.errors.messages.email -}}
+                              </span>
+                            </small>
+                          {%- endif -%}
+                        </div>
+         
+                        <div class="field">
+                          <input
+                            type="tel"
+                            id="ContactForm-phone"
+                            class="field__input"
+                            autocomplete="tel"
+                            name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                            placeholder="{{ 'templates.contact.form.phone' | t }}"
+                            aria-required="true"
+                            required
+                          >
+                          <label class="field__label" for="ContactForm-phone">Телефон</label>
+                        </div>
+                  
+                        <div class="field">
+                          <textarea
+                            rows="10"
+                            id="ContactForm-body"
+                            class="text-area field__input"
+                            name="contact[Address]"
+                            placeholder="Адрес за доставка"
+                            aria-required="true"
+                            required
+                          >
+                            {{- form.body -}}
+                          </textarea>
+                  
+                          <label class="form__label field__label" for="ContactForm-body">
+                            Адрес за доставка
+                          </label>
+                        </div>
+              
+                        <div class="field hidden">
+                          <div class="field__products">
+                            {% for item in cart.items %}
+                              <div class="cart-item-{{ forloop.index }}">
+                                <input
+                                  type="text"
+                                  id="ContactForm-product-url-{{ forloop.index }}"
+                                  class="field__input"
+                                  name="contact[Product Url-{{ forloop.index }}]"
+                                  value="https://siamore.net{{ item.url }}"
+                                >
+      
+                                <input
+                                  type="text"
+                                  id="ContactForm-title-{{ forloop.index }}"
+                                  class="field__input"
+                                  name="contact[Product Title-{{ forloop.index }}]"
+                                  value="{{ item.title }}"
+                                >
+      
+                                <input
+                                  type="text"
+                                  id="ContactForm-quantity-{{ forloop.index }}"
+                                  class="field__input"
+                                  name="contact[Product Quantity-{{ forloop.index }}]"
+                                  value="{{ item.quantity }}"
+                                >
+      
+                                <input
+                                  type="text"
+                                  id="ContactForm-price-{{ forloop.index }}"
+                                  class="field__input"
+                                  name="contact[Product price-{{ forloop.index }}]"
+                                  value="{{ item.price | money }}"
+                                >
+                              </div><!-- /.cart-item -->
+                            {% endfor %}
+                          </div><!-- /.field__products -->
+      
+                          <div>
+                            <input
+                              type="text"
+                              id="ContactForm-Total"
+                              class="field__input"
+                              name="contact[Крайна сума]"
+                              value="{{ cart.total_price | money_with_currency }}"
+                            >
+                          </div>
+      
+                        </div>
+
+                        <div class="custom__selected-products">
+                          <h3>Избрани продукти ({{ cart.item_count }})</h3>
+      
+                          <div class="cart-items is-small">
+                            <cart-drawer-items
+                              {% if cart == empty %}
+                                class=" is-empty"
+                              {% endif %}
+                            >
+                              <form
+                                action="{{ routes.cart_url }}"
+                                id="CartDrawer-Form"
+                                class="cart__contents cart-drawer__form"
+                                method="post"
+                              >
+                                <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
+                                  {%- if cart != empty -%}
+                                    <div class="drawer__cart-items-wrapper">
+                                      <table class="cart-items" role="table"> 
+                                        <tbody role="rowgroup">
+                                          {%- for item in cart.items -%}
+                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                                              <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
+                                                {% if item.image %}
+                                                  {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+                                                  <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                                                  <img
+                                                    class="cart-item__image"
+                                                    src="{{ item.image | image_url: width: 300 }}"
+                                                    alt="{{ item.image.alt | escape }}"
+                                                    loading="lazy"
+                                                    width="150"
+                                                    height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                                                  >
+                                                {% endif %}
+                                              </td>
+          
+                                              <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
+                                                {%- if settings.show_vendor -%}
+                                                  <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                                {%- endif -%}
+          
+                                                <a href="{{ item.url }}" class="cart-item__name h4 break">
+                                                  {{- item.product.title | escape -}}
+                                                </a>
+          
+                                                {%- if item.original_price != item.final_price -%}
+                                                  <div class="cart-item__discounted-prices">
+                                                    <span class="visually-hidden">
+                                                      {{ 'products.product.price.regular_price' | t }}
+                                                    </span>
+                                                    <s class="cart-item__old-price product-option">
+                                                      {{- item.original_price | money -}}
+                                                    </s>
+                                                    <span class="visually-hidden">
+                                                      {{ 'products.product.price.sale_price' | t }}
+                                                    </span>
+                                                    <strong class="cart-item__final-price product-option">
+                                                      {{ item.final_price | money }}
+                                                    </strong>
+                                                  </div>
+                                                {%- else -%}
+                                                  <div class="product-option">
+                                                    {{ item.original_price | money }}
+                                                  </div>
+                                                {%- endif -%}
+          
+                                                {%- if item.product.has_only_default_variant == false
+                                                  or item.properties.size != 0
+                                                  or item.selling_plan_allocation != null
+                                                -%}
+                                                  <dl>
+                                                    {%- if item.product.has_only_default_variant == false -%}
+                                                      {%- for option in item.options_with_values -%}
+                                                        <div class="product-option">
+                                                          <dt>{{ option.name }}:</dt>
+                                                          <dd>
+                                                            {{ option.value -}}
+                                                            {%- unless forloop.last %}, {% endunless %}
+                                                          </dd>
+                                                        </div>
+                                                      {%- endfor -%}
+                                                    {%- endif -%}
+          
+                                                    {%- for property in item.properties -%}
+                                                      {%- assign property_first_char = property.first | slice: 0 -%}
+                                                      {%- if property.last != blank and property_first_char != '_' -%}
+                                                        <div class="product-option">
+                                                          <dt>{{ property.first }}:</dt>
+                                                          <dd>
+                                                            {%- if property.last contains '/uploads/' -%}
+                                                              <a
+                                                                href="{{ property.last }}"
+                                                                class="link"
+                                                                target="_blank"
+                                                                aria-describedby="a11y-new-window-message"
+                                                              >
+                                                                {{ property.last | split: '/' | last }}
+                                                              </a>
+                                                            {%- else -%}
+                                                              {{ property.last }}
+                                                            {%- endif -%}
+                                                          </dd>
+                                                        </div>
+                                                      {%- endif -%}
+                                                    {%- endfor -%}
+                                                  </dl>
+          
+                                                  <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                                {%- endif -%}
+          
+                                                <ul
+                                                  class="discounts list-unstyled"
+                                                  role="list"
+                                                  aria-label="{{ 'customer.order.discount' | t }}"
+                                                >
+                                                  {%- for discount in item.line_level_discount_allocations -%}
+                                                    <li class="discounts__discount">
+                                                      {%- render 'icon-discount' -%}
+                                                      {{ discount.discount_application.title }}
+                                                    </li>
+                                                  {%- endfor -%}
+                                                </ul>
+                                              </td>
+          
+                                              <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
+                                                {%- render 'loading-spinner' -%}
+                                                <div class="cart-item__price-wrapper">
+                                                  {%- if item.original_line_price != item.final_line_price -%}
+                                                    <div class="cart-item__discounted-prices">
+                                                      <span class="visually-hidden">
+                                                        {{ 'products.product.price.regular_price' | t }}
+                                                      </span>
+                                                      <s class="cart-item__old-price price price--end">
+                                                        {{ item.original_line_price | money }}
+                                                      </s>
+                                                      <span class="visually-hidden">
+                                                        {{ 'products.product.price.sale_price' | t }}
+                                                      </span>
+                                                      <span class="price price--end">
+                                                        {{ item.final_line_price | money }}
+                                                      </span>
+                                                    </div>
+                                                  {%- else -%}
+                                                    <span class="price price--end">
+                                                      {{ item.original_line_price | money }}
+                                                    </span>
+                                                  {%- endif -%}
+          
+                                                  {%- if item.variant.available and item.unit_price_measurement -%}
+                                                    <div class="unit-price caption">
+                                                      <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                                      {{ item.unit_price | money }}
+                                                      <span aria-hidden="true">/</span>
+                                                      <span class="visually-hidden"
+                                                        >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
+                                                      >
+                                                      {%- if item.unit_price_measurement.reference_value != 1 -%}
+                                                        {{- item.unit_price_measurement.reference_value -}}
+                                                      {%- endif -%}
+                                                      {{ item.unit_price_measurement.reference_unit }}
+                                                    </div>
+                                                  {%- endif -%}
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          {%- endfor -%}
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  {%- endif -%}
+                                  <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
+                                  <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
+                                    {{ 'accessibility.loading' | t }}
+                                  </p>
+                                </div>
+                                <div id="CartDrawer-CartErrors" role="alert"></div>
+                              </form>
+                            </cart-drawer-items>
+      
+                            {% if cart.item_count > 1 %}
+                              <span class="cart-items__show-all ">Виж всички</span>
+                            {% endif %}
+                          </div><!-- /.cart-items -->
+                        </div><!-- /.custom__selected-products -->
+
+                        <div class="custom__form-atc">
+                          <div class="totals" role="status">
+                            <h2 class="totals__total">Доставка:</h2>
+                            
+                            
+                            <p class="totals__total-value">
+                              {% if cart.total_price <= 10000 %}
+                                7.99лв BGN
+                              {% else %}
+                                Безплатна доставка
+                              {% endif %}
+                            </p>
+                          </div>
+
+                          <div class="totals" role="status">
+                            <h2 class="totals__total">Крайна сума:</h2>
+                            <p class="totals__total-value">
+                              {% assign total_price = cart.total_price %}
+
+                              {% if total_price <= 10000 %}
+                                {% assign total_price = total_price | plus: 799 %}
+
+                                {{ total_price | money_with_currency}}
+                              {% else %}
+                                {{ total_price | money_with_currency}}
+                              {% endif %}
+                            </p>
+                          </div>
+                
+                          <button class="custom__form-submit button" type="submit">Поръчай</button>
+                        </div><!-- /.custom__form-atc -->
+                      {%- endform -%}
+                    </div><!-- /.custom__form-wrapper -->
+                  </div><!-- /.cod -->
+                </div><!-- /.accordion__body -->
+              </div><!-- /.accordion -->
+            </li>
+          </ul>
+        </div><!-- /.accordions -->
+      </div><!-- /.custom__inner -->
+    </div><!-- /.page-width -->
+  </div><!-- /.custom-checkout -->
+{% else %}
+  <h2 style="text-align: center;">404</h2>
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Custom Checkout",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    }
+  ]
+}  
+{% endschema %}

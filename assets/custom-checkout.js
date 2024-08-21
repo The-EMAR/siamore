@@ -1,5 +1,3 @@
-console.log('js checkout');
-
 // Accordion 
 
 const customCheckout = document.querySelector('.custom-checkout');
@@ -12,7 +10,7 @@ if (customCheckout) {
 
     // Init 
     getAccordions.forEach( (loop, index) =>{     
-      if (index == 0) {
+      if (index == 1) {
         loop.parentElement.classList.add('is-open');
       } else {
         loop.parentElement.classList.add('is-hide');
@@ -73,3 +71,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.log('The form was not successfully posted.');
   }
 });
+
+// Small and Large Show Products
+
+let showAllProducts = customCheckout.querySelector('.cart-items__show-all');
+
+if (showAllProducts) {
+  showAllProducts.addEventListener('click',()=>{
+    let cartItemsWrapper = customCheckout.querySelector('.custom-cart-items');
+
+    if (cartItemsWrapper) {
+      if (cartItemsWrapper.classList.contains('is-small')) {
+        cartItemsWrapper.classList.remove('is-small');
+        showAllProducts.textContent = "Скрий";
+      } else {
+        cartItemsWrapper.classList.add('is-small');
+        showAllProducts.textContent = "Покажи всички";
+      }
+    }
+  });
+}
+
+// Form Submit
+
+// if (customCheckout) {
+//   const handleForm = customCheckout.querySelector('.custom__form');
+
+//   if (handleForm) {
+//     let handleSubmitButton = customCheckout.querySelector('.custom__form-submit');
+    
+//     handleSubmitButton?.addEventListener('click',()=>{
+//       console.log('click');
+      
+//       handleForm.submit();
+//     })
+//   }
+// }

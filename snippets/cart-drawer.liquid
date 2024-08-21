@@ -610,6 +610,11 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
+        {% if settings.custom_checkout != blank %}
+          <a class="cart__checkout-button button" style="width: 100%; max-width: 100%;" href="{{ settings.custom_checkout }}">
+            {{ 'sections.cart.delivery' | t }}
+          </a>
+        {% else %}
           <button
             type="submit"
             id="CartDrawer-Checkout"
@@ -622,6 +627,7 @@
           >
             <span style="margin-left: 1rem; display: inline-block;">{{ 'sections.cart.delivery' | t }}</span>
           </button>
+        {% endif %}
         </div>
       </div>
     </div>

@@ -1,0 +1,11 @@
+/* ty page */
+
+.ty-page {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.ty-page .ty__head i {
+  color: green;
+  font-size: 5rem;
+}

@@ -1,11 +1,69 @@
 /* custom-checkout */
 
+.custom-checkout {
+  margin-bottom: 10rem;
+}
+
+/* Logo */
+
+.custom-checkout .custom__logo {
+  display: block;
+  text-align: center;
+}
+
+/* Head */
+
+.custom-checkout .custom__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+}
+
+/* Image */
+
+.custom-checkout .custom__image {
+  max-width: 42%;
+  height: 100%;
+}
+
 /* Form */
 .custom-checkout .custom__form {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
 }
+
+.custom-checkout .custom__form-wrapper {
+  /* margin-top: 5rem; */
+}
+
+.custom-checkout .custom__form-atc {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1.5rem 0;
+  /* border-top: .1rem solid gray; */
+  margin-top: 3rem;
+}
+
+.custom-checkout .custom__form-submit {
+  background-color: #ff6f91;
+  margin-top: 3rem;
+}
+
+.custom-checkout .custom__form-submit:after,
+.custom-checkout .custom__form-submit:before {
+  content: unset;
+}
+
+/* Selected products */
+
+.custom-checkout .custom__selected-products {
+  position: relative; 
+  margin-top: 3rem;
+}
+
 
 
 /* Accordions */
@@ -15,12 +73,11 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  /* row-gap: 1rem; */
+  margin: 0;
 }
 
-.accordions ul li {
-
-}
+.accordions ul li {}
 
 /* Accordion */
 
@@ -29,7 +86,7 @@
   align-items: center;
   column-gap: .8rem;
   border-top: .1rem solid gray;
-  /* border-bottom: .1rem solid gray; */
+  border-bottom: .1rem solid gray;
   padding: 0 .5rem;
 }
 
@@ -42,9 +99,12 @@
   border: .1rem solid gray;
 }
 
+.accordion.is-open .accordion__head {
+  background-color: #8080800e;
+}
 
 .accordion.is-open .accordion__head span {
-  background-color: rgb(0, 255, 85);
+  background-color: rgb(0, 0, 0);
 }
 
 .accordion.is-hide .accordion__body {
@@ -64,3 +124,91 @@
   height: 100%;
 }
 
+/* cart-items override */
+
+.custom-cart-items {
+  /* position: relative; */
+  /* padding-bottom: 3rem; */
+}
+
+.custom-cart-items .cart-item {
+  margin-bottom: 1.5rem;
+}
+
+.custom-cart-items.is-small {
+  max-height: 14rem;
+  overflow: hidden;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .custom-cart-items.is-small {
+    max-height: 9rem;
+    overflow: hidden;
+  }
+  
+}
+
+.custom-cart-items .cart-item__image {
+  max-width: calc(7rem / var(--font-body-scale));
+}
+
+/* Show All Button */
+
+.custom-cart-items .cart-items__show-all {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: underline;
+}
+
+.custom-cart-items.is-full .cart-items__show-all {
+  display: none;
+}
+
+
+/* COD */
+
+.cod h3 {
+  margin-top: 0;
+}
+
+/* Pay with Cart */
+
+.pay-with-cart {
+  border-top: .1rem solid rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 0;
+}
+
+.pay-with-cart .cart__ctas {
+  flex-direction: column;
+}
+
+.pay-with-cart .payment-icons ul {
+  justify-content: center;
+}
+
+
+/* Devilery info */
+
+.delivery-info {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  column-gap: .5rem;
+}
+
+.delivery-info span {
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.delivery-info p {
+  margin: 0;
+}
