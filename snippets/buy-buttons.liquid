@@ -78,6 +78,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -96,13 +97,14 @@
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {% comment %} <span style="margin-rigth: 1rem; display:inline-block;">{{ 'products.product.add_to_cart' | t }}</span> {% endcomment %}
+                <span style="margin-rigth: 1rem; display:inline-block;">{{ 'products.product.add_to_cart' | t }}</span>
 
                 <i class="fa-regular fa-heart"></i>
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+
           {%- if show_dynamic_checkout -%}
             <button id="checkout-now" 
             class="button" 
@@ -117,6 +119,7 @@
       {%- endform -%}
     </product-form>
   {%- else -%}
+
     <div class="product-form">
       <div class="product-form__buttons form">
         <button

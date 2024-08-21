@@ -133,6 +133,7 @@
     ],
     "cart_drawer_collections_image_ratio": "portrait",
     "cart_color_scheme": "scheme-91f79a96-22a3-4942-995a-b01fa90f21f7",
+    "custom_checkout": "shopify:\/\/pages\/my-checkout",
     "cart_drawer_collection": "рокли",
     "sections": {
       "main-password-header": {
